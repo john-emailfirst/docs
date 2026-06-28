@@ -56,7 +56,8 @@
               "kit/integrations"
             ]
           }
-        ]
+        ],
+        "icon": "k"
       },
       {
         "tab": "Email-First Framework",
