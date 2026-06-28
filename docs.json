@@ -57,7 +57,7 @@
             ]
           }
         ],
-        "icon": "k"
+        "icon": "coffee-togo"
       },
       {
         "tab": "Email-First Framework",
@@ -114,7 +114,7 @@
     },
     "links": [
       {
-        "href": "https://emailfirstco/the-hub",
+        "href": "https://emailfirst.co/the-hub",
         "label": "Join the Hub"
       }
     ]
