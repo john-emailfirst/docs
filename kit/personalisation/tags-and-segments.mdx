@@ -1,7 +1,7 @@
 ---
-title: "Tags and Segments in Kit: Organise Your Subscribers"
-sidebarTitle: "Tags & Segments"
-description: "Kit uses tags and segments to organise subscribers and target the right people. Learn how to build a tagging system that scales with your business."
+title: "Tags: Organise Your Subscribers"
+sidebarTitle: "Tags"
+description: "Kit uses tags to organise subscribers and target the right people. Learn how to build a tagging system that scales with your business."
 ---
 
 Kit's power as an email platform comes directly from its tagging system. Rather than maintaining separate lists for different audience subgroups — a practice that causes duplicate billing, management headaches, and messy automations in other tools — Kit uses a single subscriber list enriched with tags. The right tag architecture lets you send precisely targeted emails while keeping your list management clean and coherent.
@@ -36,7 +36,7 @@ Without tags, every broadcast goes to everyone, and "everyone" is too blunt an i
 Use these four tag categories as your foundation. Name your tags consistently — a naming convention like `category: value` (e.g., `source: podcast`) makes your tag list scannable and prevents duplicates.
 
 | Tag Category | Examples | How It Gets Applied | How It Gets Used |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Source tags** | `source: podcast`, `source: blog`, `source: twitter`, `source: referral-partner` | Applied at the form level — each opt-in form adds the relevant source tag | Filter broadcasts to audience segments by where they came from; track which channels drive the most subscribers |
 | **Interest tags** | `interest: copywriting`, `interest: productivity`, `interest: course-topic-x` | Applied via click triggers in emails, via form choice fields, or via automation when subscriber visits certain pages | Send highly relevant content to people who've expressed a specific interest; avoid sending irrelevant emails to uninterested subscribers |
 | **Status tags** | `customer`, `free-user`, `trial`, `churned`, `vip` | Applied via Kit Commerce on purchase, or manually/via automation at key lifecycle moments | Exclude `customer` from sales emails for products they've already bought; send exclusive content to `vip` subscribers |
@@ -81,6 +81,7 @@ Example segment: subscribers tagged `source: podcast` AND `interest: course-topi
 One of Kit's most powerful and underused features is the ability to tag subscribers based on which links they click in your emails. In any broadcast or sequence email, select the link you want to make a trigger, and add a **Click trigger** action — choose which tag to apply when someone clicks.
 
 Use this to:
+
 - Segment your audience by content interest (different links go to different topics)
 - Identify your most engaged subscribers (anyone who clicks a "I'm interested" link)
 - Qualify subscribers for a pitch (anyone who clicks to read your sales page gets tagged, then enters a follow-up sequence)
@@ -89,7 +90,7 @@ Use this to:
 
 Exclusions are just as important as inclusions. Before sending any sales email, set up exclusions to remove subscribers who already own what you're selling. In the broadcast recipient settings, use **Does not have tag: customer** (or a product-specific tag like `customer: course-name`) to ensure existing customers never receive a pitch for something they've already bought.
 
-Good exclusion hygiene also means excluding cold subscribers — people who haven't opened any email in 90+ days — from important launch sequences, where high engagement rates matter most for deliverability.
+Good exclusion hygiene also means excluding cold subscribers — people who haven't opened any email in 90\+ days — from important launch sequences, where high engagement rates matter most for deliverability.
 
 ## Keeping Your Tag System Clean
 
