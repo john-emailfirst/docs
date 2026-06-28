@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "sequoia",
+  "theme": "mint",
   "name": "Email-First Business",
   "colors": {
     "primary": "#2c5bf9",
@@ -112,12 +112,18 @@
       "label": "Start with Kit",
       "href": "https://partners.kit.com/baa5bi"
     },
-    "links": []
+    "links": [
+      {
+        "href": "https://emailfirstco/the-hub",
+        "label": "Join the Hub"
+      }
+    ]
   },
   "footer": {
     "socials": {
       "linkedin": "https://linkedin.com/in/jbellingham",
-      "youtube": "https://youtube.com/@emailfirstco"
+      "youtube": "https://youtube.com/@emailfirstco",
+      "website": "https://emailfirst.co"
     }
   },
   "description": "Build a profitable email-first business using Kit. Guidance and support from a Kit Certified Expert.",
