@@ -8,8 +8,8 @@
     "dark": "#1e42ae"
   },
   "favicon": {
-    "light": "/images/EmailFirstLogo500x500.png",
-    "dark": "/images/EmailFirstLogo500x500.png"
+    "light": "/images/EFLogo(Darktext).png",
+    "dark": "/images/EFLogo(Whitetext).png"
   },
   "navigation": {
     "tabs": [
@@ -31,15 +31,13 @@
             "group": "Getting Started",
             "icon": "octagon-check",
             "pages": [
-              "kit/overview",
               "kit/account-setup",
-              "kit/importing-subscribers",
               "kit/verify-sending-domain",
               "kit/custom-domains"
             ]
           },
           {
-            "group": "Building Your Audience",
+            "group": "Audience",
             "icon": "users",
             "pages": [
               "kit/landing-pages",
@@ -53,7 +51,7 @@
             ]
           },
           {
-            "group": "Email Marketing",
+            "group": "Email",
             "icon": "envelope",
             "pages": [
               "kit/broadcast-emails",
@@ -62,15 +60,6 @@
               "kit/rss-feeds",
               "kit/personalisation/liquid-code",
               "kit/deliverability-in-kit"
-            ]
-          },
-          {
-            "group": "Automations",
-            "icon": "robot",
-            "pages": [
-              "kit/automations",
-              "kit/visual-automations",
-              "kit/rules"
             ]
           },
           {
