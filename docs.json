@@ -100,7 +100,8 @@
               "email-first/list-hygiene"
             ]
           }
-        ]
+        ],
+        "hidden": true
       }
     ]
   },
