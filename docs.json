@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "sequoia",
   "name": "Email-First Business",
   "colors": {
     "primary": "#2c5bf9",
@@ -108,8 +108,9 @@
     "primary": {
       "type": "button",
       "label": "Start with Kit",
-      "href": "https://kit.com"
-    }
+      "href": "https://partners.kit.com/baa5bi"
+    },
+    "links": []
   },
   "footer": {
     "socials": {
@@ -119,10 +120,19 @@
   },
   "description": "Build a profitable email-first business using Kit. Guidance and support from a Kit Certified Expert.",
   "logo": {
-    "light": "/images/eflogodarkbackground(2).png",
-    "dark": "/images/eflogolightbackground(1).png"
+    "light": "/images/EFLogo(Darktext).png",
+    "dark": "/images/EFLogo(Whitetext).png"
   },
   "background": {
     "decoration": "gradient"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weight": 700
+    },
+    "body": {
+      "family": "Inter"
+    }
   }
 }
