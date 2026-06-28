@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "The Email-First Knowledge Base",
+  "name": "The Handbook",
   "colors": {
     "primary": "#2c5bf9",
     "light": "#c6ddff",
@@ -14,83 +14,94 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Kit Guide",
+        "tab": "Start Here",
+        "pages": [
+          "index",
+          "start-here",
+          "coffee-and-kit",
+          "whats-new"
+        ],
+        "icon": "map"
+      },
+      {
+        "tab": "The Kit Handbook",
+        "icon": "book-open",
         "groups": [
           {
-            "group": "Kit Settings",
+            "group": "Getting Started",
+            "icon": "octagon-check",
             "pages": [
               "kit/overview",
               "kit/account-setup",
               "kit/importing-subscribers",
-              "kit/verify-sending-domain.mdx",
+              "kit/verify-sending-domain",
               "kit/custom-domains"
-            ],
-            "icon": "octagon-check"
-          },
-          {
-            "group": "Key Kit Components",
-            "icon": "list-tree",
-            "pages": [
-              "kit/landing-pages",
-              "kit/opt-in-forms",
-              "kit/broadcast-emails",
-              "kit/subscribers",
-              "kit/newsletter-site",
-              "kit/recommendations"
             ]
           },
           {
-            "group": "Personalisation",
-            "icon": "person-circle-check",
+            "group": "Building Your Audience",
+            "icon": "users",
             "pages": [
+              "kit/landing-pages",
+              "kit/opt-in-forms",
+              "kit/subscribers",
+              "kit/recommendations",
               "kit/personalisation/tags-and-segments",
               "kit/personalisation/segments",
               "kit/personalisation/custom-fields",
-              "kit/personalisation/polls",
-              "kit/personalisation/liquid-code"
+              "kit/personalisation/polls"
+            ]
+          },
+          {
+            "group": "Email Marketing",
+            "icon": "envelope",
+            "pages": [
+              "kit/broadcast-emails",
+              "kit/sequences",
+              "kit/newsletter-site",
+              "kit/rss-feeds",
+              "kit/personalisation/liquid-code",
+              "kit/deliverability-in-kit"
             ]
           },
           {
             "group": "Automations",
+            "icon": "robot",
             "pages": [
-              "kit/sequences",
               "kit/automations",
               "kit/visual-automations",
-              "kit/rules",
-              "kit/mcp-server",
-              "kit/rss-feeds",
-              "kit/api-keys"
-            ],
-            "icon": "robot"
+              "kit/rules"
+            ]
           },
           {
-            "group": "Selling & Commerce",
+            "group": "Commerce",
+            "icon": "credit-card",
             "pages": [
               "kit/kit-commerce",
               "kit/tips-and-recommendations"
-            ],
-            "icon": "credit-card"
+            ]
           },
           {
-            "group": "Kit App Store",
-            "icon": "app-store",
-            "hidden": true,
-            "pages": []
-          },
-          {
-            "group": "Email Marketing Best Practices",
+            "group": "Integrations",
+            "icon": "plug",
             "pages": [
-              "kit/deliverability-in-kit",
-              "kit/analytics-and-reporting",
-              "kit/integrations"
-            ],
-            "icon": "angel"
+              "kit/integrations",
+              "kit/api-keys",
+              "kit/mcp-server"
+            ]
+          },
+          {
+            "group": "Reporting",
+            "icon": "chart-line",
+            "pages": [
+              "kit/analytics-and-reporting"
+            ]
           }
-        ],
-        "icon": "coffee-togo"
+        ]
       },
       {
-        "tab": "Email-First Framework",
+        "tab": "The Email-First Handbook",
+        "icon": "envelope-open-text",
         "groups": [
           {
             "group": "Introduction",
@@ -100,40 +111,43 @@
             ]
           },
           {
-            "group": "Strategy",
+            "group": "Build",
             "pages": [
               "email-first/positioning",
-              "email-first/niche-and-audience",
-              "email-first/content-strategy"
+              "email-first/niche-and-audience"
             ]
           },
           {
-            "group": "List Building",
+            "group": "Attract",
             "pages": [
+              "email-first/content-strategy",
               "email-first/lead-magnets",
-              "email-first/landing-pages",
               "email-first/growth-channels"
             ]
           },
           {
-            "group": "Monetisation",
+            "group": "Convert",
             "pages": [
-              "email-first/revenue-models",
-              "email-first/selling-to-your-list",
-              "email-first/sponsorships"
+              "email-first/landing-pages",
+              "email-first/selling-to-your-list"
             ]
           },
           {
-            "group": "Retention",
+            "group": "Deliver",
             "pages": [
               "email-first/subscriber-experience",
-              "email-first/deliverability",
+              "email-first/deliverability"
+            ]
+          },
+          {
+            "group": "Retain",
+            "pages": [
+              "email-first/revenue-models",
+              "email-first/sponsorships",
               "email-first/list-hygiene"
             ]
           }
-        ],
-        "icon": "envelope",
-        "hidden": true
+        ]
       }
     ]
   },
@@ -157,7 +171,7 @@
       "website": "https://emailfirst.co"
     }
   },
-  "description": "Build a profitable email-first business using Kit. Guidance and support from a Kit Certified Expert.",
+  "description": "The Handbook for learning Kit and building an Email-First business.",
   "logo": {
     "light": "/images/EFLogo(Darktext).png",
     "dark": "/images/EFLogo(Whitetext).png"
