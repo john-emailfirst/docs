@@ -75,9 +75,7 @@
             "group": "Kit App Store",
             "icon": "app-store",
             "hidden": true,
-            "pages": [
-              "senja"
-            ]
+            "pages": []
           },
           {
             "group": "Email Marketing Best Practices",
