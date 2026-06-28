@@ -8,8 +8,8 @@
     "dark": "#1e42ae"
   },
   "favicon": {
-    "light": "/images/EmailFirstLogo500x500.png",
-    "dark": "/images/EmailFirstLogo500x500.png"
+    "light": "/images/EFLogo(Darktext).png",
+    "dark": "/images/EFLogo(Whitetext).png"
   },
   "navigation": {
     "tabs": [
