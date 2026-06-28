@@ -1,0 +1,106 @@
+---
+title: "Kit Sequences: Automate Your Welcome and Nurture Emails"
+sidebarTitle: "Sequences"
+description: "Sequences in Kit are automated email series delivered on a schedule. Learn how to create welcome sequences, nurture series, and evergreen email courses."
+---
+
+Sequences are the automation backbone of Kit. Instead of manually sending individual emails to every new subscriber, a sequence delivers a series of emails automatically — each one timed to go out after a set interval. Every subscriber who enters a sequence starts at email 1, regardless of when they joined your list. Set it up once and it works for you around the clock.
+
+## Sequences vs. Broadcasts
+
+Understanding the difference between sequences and broadcasts will save you a lot of confusion early on:
+
+| | Sequences | Broadcasts |
+|---|---|---|
+| **Who receives them** | Each subscriber starts at email 1 | All (or filtered) subscribers at the same time |
+| **When they send** | On a per-subscriber schedule | At a specific date and time you choose |
+| **Best for** | Welcome flows, courses, nurture series | News, announcements, one-time campaigns |
+
+Broadcasts are snapshots in time. Sequences are personalised journeys.
+
+## Common Sequence Types
+
+- **Welcome sequence** — Introduce yourself and deliver value to new subscribers in their first week
+- **Email course** — A structured series teaching a skill over 5–10 emails
+- **Nurture series** — Warm up cold subscribers with useful content before making an offer
+- **Post-purchase follow-up** — Onboard new customers and set them up for success
+- **Re-engagement sequence** — Win back inactive subscribers before you clean your list
+
+## Creating Your First Sequence
+
+<Steps>
+  <Step title="Open Sequences">
+    In your Kit dashboard, navigate to **Sequences** in the left sidebar and click **New Sequence**.
+  </Step>
+  <Step title="Name your sequence">
+    Give it a clear internal name — for example, "Welcome Sequence – Main List" or "Email Course: Freelance Pricing". This name is for your reference only.
+  </Step>
+  <Step title="Add your first email">
+    Click **Add Email**. Write your subject line, set the **From Name**, and compose your message. You can write in plain text or use the visual editor for HTML formatting.
+  </Step>
+  <Step title="Set the delay">
+    Below each email, set how many days after the previous email this one should send. Email 1 typically sends immediately (0 days). Email 2 might send after 1 day. Email 3 after 3 more days — and so on.
+  </Step>
+  <Step title="Configure sending windows">
+    In the sequence settings, define when Kit is allowed to send. You can restrict delivery to weekdays only and set a time window (e.g., 9am–5pm in your subscribers' time zones). This prevents emails landing at 3am.
+  </Step>
+  <Step title="Add remaining emails">
+    Repeat steps 3–4 for each email in the series. You can add, reorder, or delete emails at any point.
+  </Step>
+  <Step title="Connect a trigger">
+    Your sequence needs something to start it. Common options: a **form sign-up**, an **automation rule**, a **tag being applied**, or a manual subscriber addition. Set this up in Automations or directly in the form settings.
+  </Step>
+</Steps>
+
+## Email Settings Within a Sequence
+
+Each email inside a sequence has its own individual settings:
+
+- **Subject line** — Write a unique subject for each email; don't reuse the same one
+- **From name** — You can override the account-level from name per email if needed (useful for team accounts)
+- **Send delay** — Days after the previous email; Kit calculates the send date per subscriber
+- **Send on specific days** — Restrict this email to certain days of the week (e.g., only Tuesdays)
+- **Content format** — Plain text emails often get better deliverability; HTML gives you more design control. Use plain text for personal-feeling sequences.
+
+## Excluding Subscribers From a Sequence
+
+You can exclude subscribers who have specific tags from receiving a sequence — useful when you want to skip the sequence for existing customers or people who've already seen the content.
+
+In the sequence settings, look for **Exclusions** and add any tags whose holders should be skipped automatically.
+
+## Editing a Live Sequence
+
+When you edit a sequence that's already running, changes apply to **future sends only**. Subscribers who have already received a given email will not receive it again. This means you can safely update copy, fix typos, or adjust delays without disrupting anyone mid-journey.
+
+<Note>
+  Sequence emails skip subscribers who are already enrolled in that sequence. Kit prevents duplicates automatically — so if someone subscribes to your list twice, they won't receive the same sequence emails again.
+</Note>
+
+## The Welcome Sequence Blueprint
+
+If you're not sure where to start, this five-email structure works for almost every creator:
+
+| Email | Delay | Purpose |
+|---|---|---|
+| **Email 1** | Immediately | Lead magnet delivery + warm hello. Deliver what you promised and introduce yourself briefly. |
+| **Email 2** | 1 day later | Your story. Share the backstory behind your work and why you do what you do. |
+| **Email 3** | 2 days later | Your best content. Link to your top 3 articles, episodes, or resources. |
+| **Email 4** | 3 days later | Common questions and FAQs. Address the things your audience always asks. |
+| **Email 5** | 5 days later | Your main offer — soft CTA. Introduce what you sell without high pressure. |
+
+This sequence does three things at once: it delivers value, it builds trust, and it primes subscribers for a future purchase — all without you having to lift a finger after setup.
+
+<Tip>
+  Build your welcome sequence before you need it. Even if you're just starting out, having a 3-email welcome sequence is better than sending new subscribers directly into your regular broadcast schedule. New subscribers are most engaged in their first 48 hours — don't waste that window.
+</Tip>
+
+## Triggering a Sequence
+
+You can start a sequence in four ways:
+
+1. **Form sign-up** — In your form settings, set the sequence as the action on subscribe
+2. **Automation rule** — Use a trigger (like a tag being applied) to subscribe someone to the sequence
+3. **Visual Automation** — Add a 'Subscribe to Sequence' action block in your automation canvas
+4. **Manually** — Open a subscriber's profile and subscribe them directly from there
+
+For most use cases, triggering via a form or automation rule is the most reliable approach.

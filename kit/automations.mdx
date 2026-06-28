@@ -1,0 +1,86 @@
+---
+title: "Kit Automations: Rules and Triggers for Hands-Free Email"
+sidebarTitle: "Automations"
+description: "Kit's automation rules fire actions when subscribers meet conditions — apply a tag, start a sequence, or move buyers out of a sales flow automatically."
+---
+
+Automations in Kit are if-this-then-that rules that respond to subscriber behaviour automatically. When something happens — a subscriber fills out a form, clicks a link, or completes a sequence — Kit fires one or more actions instantly, without you having to do anything. The result is a marketing workflow that runs 24/7 and treats every subscriber as an individual.
+
+## Automation Triggers
+
+A trigger is the event that starts the automation. Kit supports the following triggers:
+
+| Trigger | Description | Common use case |
+|---|---|---|
+| **Subscriber subscribes to a form** | Fires when someone opts in via a specific form | Start a welcome sequence for new subscribers |
+| **Subscriber is tagged** | Fires when a specific tag is applied to a subscriber | Begin a segmented sequence for a buyer or lead |
+| **Subscriber clicks a link** | Fires when a subscriber clicks a tracked link in an email | Flag interest in a specific product or topic |
+| **Subscriber completes a sequence** | Fires when a subscriber reaches the end of a sequence | Trigger an upsell offer or move to next nurture phase |
+| **Subscriber purchases a product** | Fires when a Kit Commerce purchase is completed | Start customer onboarding, add 'customer' tag |
+| **Custom field value changes** | Fires when a subscriber's custom field is updated | Personalise sequences based on subscriber data |
+
+## Automation Actions
+
+Once a trigger fires, Kit can execute one or more actions:
+
+- **Add a tag** — Label the subscriber for segmentation or to trigger further automations
+- **Remove a tag** — Clean up tags when a subscriber moves to a new stage
+- **Subscribe to a sequence** — Enrol the subscriber in an email series automatically
+- **Unsubscribe from a sequence** — Remove a subscriber from a sequence (e.g., when they've purchased)
+- **Send an email** — Deliver a one-off email immediately in response to the trigger
+- **Add to or remove from a segment** — Manage dynamic segment membership
+- **Send a webhook** — Notify an external service (your CRM, Slack, custom app) via HTTP POST
+
+## Common Automation Workflows
+
+These four workflows cover the majority of what solopreneurs need:
+
+1. **New subscriber onboarding** — Form sign-up → tag subscriber → start welcome sequence
+2. **Sales intent signal** — Click on sales page link → tag as 'interested' → send follow-up email 24 hours later
+3. **Post-purchase transition** — Purchase product → remove from sales sequence → add 'customer' tag → start onboarding sequence
+4. **Course completion upsell** — Complete email course → tag as 'course-complete' → send upsell offer for the next product
+
+## Simple Automations vs. Visual Automations
+
+Kit gives you two ways to automate:
+
+- **Automation Rules** (this page) — Single trigger → one or more actions. Fast to set up, ideal for straightforward workflows.
+- **Visual Automations** — A drag-and-drop canvas with multi-step journeys, wait steps, and if/else branching logic.
+
+Use automation rules for simple, single-step triggers. Use Visual Automations when you need conditions, multiple branches, or want to see the full subscriber journey mapped out. See the [Visual Automations](/kit/visual-automations) page for details.
+
+## Setting Up a 'Link Click → Tag → Follow-Up Email' Automation
+
+This is one of the most powerful simple automations you can create. Here's how to build it:
+
+<Steps>
+  <Step title="Create a tracked link in your email">
+    Before setting up the automation, send (or draft) a broadcast that contains a link you want to track — for example, a link to your sales page. Kit tracks clicks on all links in your emails automatically.
+  </Step>
+  <Step title="Open Automations">
+    In your Kit dashboard, navigate to **Automations** in the left sidebar and click **New Automation**.
+  </Step>
+  <Step title="Choose your trigger">
+    Select **Subscriber clicks a link**. Kit will ask you to specify which email and which link to watch. Choose the broadcast and the specific URL.
+  </Step>
+  <Step title="Add your first action: Apply a tag">
+    Click **Add Action** and select **Add Tag**. Create or choose a tag like `interested-in-[product]`. This tag captures the behaviour and lets you segment these subscribers later.
+  </Step>
+  <Step title="Add your second action: Send an email">
+    Click **Add Action** again and select **Send Email**. Write a short follow-up email — acknowledge their interest and provide more context or a direct offer. Set the send delay if you want it to go out after a pause rather than immediately.
+  </Step>
+  <Step title="Activate the automation">
+    Review your trigger and actions, then click **Activate**. The automation runs immediately for any new link clicks from this point forward.
+  </Step>
+</Steps>
+
+<Tip>
+  The 'purchased product' trigger is one of the most powerful automations you can set up. It automatically moves buyers out of sales sequences and into a customer onboarding flow — so your customers never receive another pitch email for something they've already bought. Set this up the moment you launch any product.
+</Tip>
+
+## Tips for Keeping Automations Organised
+
+- **Name your automations clearly** — Include the trigger and outcome in the name, e.g., "Form: Freebie Signup → Welcome Sequence"
+- **Audit automations regularly** — Inactive automations from old campaigns can still fire if you don't deactivate them
+- **Stack actions thoughtfully** — Multiple actions in a single automation fire in order from top to bottom; sequence matters
+- **Use tags as connective tissue** — Tags let automations talk to each other. One automation applies a tag; another automation fires when that tag is applied

@@ -1,0 +1,101 @@
+---
+title: "Kit Analytics: Measure What Matters in Your Email Business"
+sidebarTitle: "Analytics"
+description: "Kit's analytics tracks opens, clicks, subscriber growth, and revenue. Learn which metrics to monitor, where to find them, and how to improve results."
+---
+
+Kit's analytics give you a clear picture of how your email marketing is actually performing — not just vanity numbers, but the signals that tell you whether your list is growing, your content is resonating, and your subscribers are taking action. This guide covers every metric Kit tracks, where to find it, and — critically — what to do when a number is heading in the wrong direction.
+
+<Note>
+  Apple Mail Privacy Protection (MPP) means that open rate data is inflated for subscribers who use Apple Mail. When a subscriber opens an email in Apple Mail on iOS 15+ or macOS Monterey+, Apple pre-fetches the tracking pixel on its servers — registering an "open" whether or not the subscriber actually read the email. Focus on **click rate** as your primary engagement metric — it's reliable because only a human clicking a link registers a click.
+</Note>
+
+## Key Metrics at a Glance
+
+| Metric | Good benchmark | Warning threshold | What to do if below benchmark |
+|---|---|---|---|
+| **Open rate** | 30–50% (niche list), 20–30% (broad list) | Below 15% | Improve subject lines; re-engage or remove inactive subscribers |
+| **Click rate** | 2–5% solid, 5%+ excellent | Below 1% | Add more specific CTAs; make links more visible; improve email body relevance |
+| **Unsubscribe rate** | Below 0.3% per email | Above 0.5% per email | Review content alignment; check frequency; segment by interest |
+| **Subscriber growth rate** | Consistent net positive | Flat or declining for 30+ days | Review opt-in sources; test new lead magnets; add Recommendations swaps |
+| **Form conversion rate** | 20–30% (dedicated landing page) | Below 10% | Rewrite the headline; strengthen the lead magnet; add social proof |
+| **Revenue per subscriber** | Varies by niche | Trending down quarter-over-quarter | Launch a product; improve offer positioning; segment and target |
+
+## Open Rate
+
+Open rate measures the percentage of delivered emails that were opened (or — post-MPP — that Apple Mail reports as opened). It's a directional signal, not a precise one.
+
+Use open rate to:
+- Compare subject line performance across broadcasts
+- Identify which sequence emails get the most attention
+- Spot overall engagement trends over time
+
+Don't use open rate to:
+- Make precise conclusions about how many people actually read a given email
+- Compare your list to industry averages (MPP distortion makes cross-list comparisons unreliable)
+
+## Click Rate
+
+Click rate is the percentage of delivered emails where at least one link was clicked. This is your most reliable engagement metric in the post-MPP world — clicks require a real human action.
+
+A 5% click rate means 50 out of every 1,000 subscribers clicked something. For a list of 2,000 subscribers, that's 100 people taking an action on your content — which can easily drive meaningful business results.
+
+Improve click rate by:
+- Adding a single, clear primary CTA rather than multiple competing links
+- Moving the most important link higher in the email
+- Writing link text that creates curiosity or communicates clear benefit ("See the full breakdown" beats "Click here")
+
+## Unsubscribe Rate
+
+A healthy unsubscribe rate is below 0.3% per email. Some unsubscribes after every broadcast is normal and healthy — it means your list is self-cleaning. Spikes are the signal to pay attention to.
+
+An unsubscribe spike typically means:
+- You sent something out of step with your usual content
+- You emailed more frequently than usual without warning
+- You made an offer that felt misaligned with what subscribers signed up for
+
+Don't try to minimise unsubscribes by hiding the button — that leads to spam complaints, which are far more damaging.
+
+## Subscriber Growth Rate
+
+Net subscriber growth = (new subscribers) − (unsubscribes + bounces + complaints) over a period.
+
+Track this monthly and look for the trend, not the absolute number. A list of 500 growing at 5% per month will outperform a list of 5,000 growing at 0% within two years.
+
+If growth is flat, review your opt-in sources. Are your forms getting traffic? Is your lead magnet still compelling? Are your Recommendations swaps active?
+
+## Where to Find Analytics in Kit
+
+- **Broadcasts** — Go to **Broadcasts**, click on any sent broadcast, and select the **Stats** tab. You'll see opens, clicks, unsubscribes, and bounces for that send.
+- **Sequences** — Open any sequence in the Sequences editor. Each email row shows open and click rates inline.
+- **Subscriber growth** — Go to **Subscribers** and look for the Growth chart at the top of the page. Toggle between 30-day, 90-day, and all-time views.
+- **Forms** — Go to **Forms**, click on any form, and select **Stats**. You'll see total views, total subscribes, and the conversion rate.
+- **Visual Automations** — Open any active Visual Automation. The canvas displays live subscriber counts at each block, showing how many subscribers are currently at each step.
+- **Commerce revenue** — Go to **Commerce → Dashboard** for revenue by product, total sales, and lifetime value estimates.
+
+## Limitations of Kit Analytics
+
+Kit's analytics are designed for simplicity, not enterprise reporting. Be aware of these gaps:
+
+- **No cohort analysis** — You can't compare how subscribers who joined in January perform vs. those who joined in March
+- **No built-in A/B testing on the free plan** — Subject line split testing requires a paid plan
+- **Limited attribution** — Kit doesn't track the customer journey from ad click to email subscribe to purchase in a single view
+- **No custom date ranges on all views** — Some reports are limited to pre-set time windows
+
+For deeper analysis, export your subscriber data as a CSV and analyse it in Google Sheets or Airtable.
+
+## Using UTM Parameters
+
+Kit doesn't natively attribute website traffic from your emails to Google Analytics. Add UTM parameters to links in your emails to close this gap.
+
+A UTM-tagged link looks like this:
+
+```
+https://yourdomain.com/article?utm_source=newsletter&utm_medium=email&utm_campaign=weekly-15
+```
+
+You can build UTM URLs using Google's [Campaign URL Builder](https://ga-dev-tools.google/campaign-url-builder/). Once tagged, all click-throughs from your emails appear in Google Analytics under **Acquisition → Campaigns**, letting you see which emails drive the most website traffic, sign-ups, or purchases.
+
+<Tip>
+  Set up a monthly analytics review. Check your three key metrics — open rate, click rate, and net subscriber growth — in 15 minutes every month and write down the numbers. You don't need a complex dashboard. A simple note or spreadsheet with three columns is enough to spot trends over time and catch problems before they compound.
+</Tip>

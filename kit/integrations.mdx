@@ -1,0 +1,141 @@
+---
+title: "Kit Integrations: Connect Your Tools and Automate Workflows"
+sidebarTitle: "Integrations"
+description: "Connect Kit to your website, course platform, and other tools via native integrations, Zapier, or the REST API. Setup steps for the most useful workflows."
+---
+
+Kit is designed to sit at the centre of your creator tool stack — connected to your website, your course platform, your checkout system, and any other tool you use to run your business. You can connect Kit via native integrations, through Zapier's 5,000+ app ecosystem, or directly through Kit's REST API if you want programmatic control.
+
+## Native Integrations
+
+<CardGroup cols={2}>
+  <Card title="WordPress" icon="wordpress">
+    The official Kit for WordPress plugin lets you embed opt-in forms, landing pages, and pop-ups — including exit-intent pop-ups — on any page or post. Subscribers sync to Kit instantly.
+  </Card>
+  <Card title="Shopify" icon="shopify">
+    Sync Shopify customer data with Kit automatically. Trigger email sequences on purchase, tag customers by product purchased, and build post-purchase nurture flows for your shop buyers.
+  </Card>
+  <Card title="Teachable" icon="graduation-cap">
+    Connect Teachable so that course enrollments automatically apply tags or start sequences in Kit. Build onboarding flows for new students without any manual work.
+  </Card>
+  <Card title="Zapier" icon="bolt">
+    Connect Kit to 5,000+ apps through Zapier. If a tool doesn't have a native Kit integration, Zapier almost certainly bridges the gap. No code required.
+  </Card>
+  <Card title="Stripe" icon="credit-card">
+    Trigger Kit automations directly from Stripe payment events — useful when you're using Stripe for payments outside of Kit Commerce. Tag buyers, start sequences, or fire webhooks on successful charges.
+  </Card>
+  <Card title="Webflow" icon="globe">
+    Embed Kit opt-in forms and landing pages directly in your Webflow site. Use Webflow's custom code embed block to drop in Kit's form embed code on any page.
+  </Card>
+</CardGroup>
+
+### Additional Native Integrations
+
+Beyond the six above, Kit also integrates natively with:
+
+- **Thinkific** and **Podia** — Sync course enrollments as Kit tags or sequence triggers
+- **MemberSpace** and **Memberful** — Sync membership status as Kit tags; automatically add or remove the 'member' tag when subscriptions start, pause, or cancel
+- **Squarespace** — Embed Kit forms on any Squarespace page via the code block
+- **Kajabi** — Connect purchases and course enrollments to Kit subscriber actions
+
+Find the full integration directory in your Kit dashboard under **Integrations** in the left sidebar.
+
+## Zapier Integration
+
+Zapier is the fastest way to connect Kit to tools that don't have a native integration. A "Zap" is a two-part automation: a **trigger** (something that happens in one app) and an **action** (something Kit does in response, or vice versa).
+
+### Kit Triggers in Zapier
+These events in Kit can start a Zap:
+- New subscriber added
+- Tag applied to a subscriber
+- Purchase completed (Kit Commerce)
+
+### Kit Actions in Zapier
+These things Kit can do as the action in a Zap:
+- Subscribe someone to your Kit list
+- Add a tag to a subscriber
+- Create a new subscriber profile
+- Remove a tag from a subscriber
+
+### Example Zapier Workflows
+
+| Trigger app | Trigger event | Kit action | Use case |
+|---|---|---|---|
+| Typeform | New form response | Create subscriber + apply tag | Webinar registrations, quiz responses |
+| Calendly | New booking | Apply tag | Tag subscribers who book a discovery call |
+| Gumroad | New sale | Create subscriber + apply 'customer' tag | Migrate Gumroad buyers into Kit |
+| Airtable | New record | Create subscriber | Import bulk subscriber additions |
+| Circle | New member | Apply 'community-member' tag | Sync community membership status |
+
+<Tip>
+  Zapier is the fastest way to connect Kit to tools that don't have a native integration. The most useful Zap to build first: **New Typeform response → Create Kit subscriber + apply tag**. If you use Typeform for any lead generation, this Zap closes the gap between form submission and email nurture instantly.
+</Tip>
+
+## Kit REST API
+
+For developers who want direct, programmatic integration, Kit provides a full REST API.
+
+**Base URL:** `https://api.kit.com/v4/`
+
+**Authentication:** All requests require your API key, passed as a header. Find your key in **Account Settings → Developer → API Keys**.
+
+### Key Endpoints
+
+| Method | Endpoint | What it does |
+|---|---|---|
+| `GET` | `/subscribers` | List all subscribers with filtering options |
+| `POST` | `/subscribers` | Create a new subscriber |
+| `GET` | `/subscribers/{id}` | Get a single subscriber by ID |
+| `PUT` | `/subscribers/{id}` | Update subscriber fields |
+| `POST` | `/tags/{id}/subscribers` | Apply a tag to a subscriber |
+| `POST` | `/sequences/{id}/subscribers` | Enrol a subscriber in a sequence |
+| `GET` | `/forms` | List all forms |
+| `POST` | `/forms/{id}/subscribers` | Subscribe someone via a specific form |
+
+### Adding a Subscriber via the API
+
+Use this curl example to add a subscriber programmatically:
+
+```bash
+curl -X POST https://api.kit.com/v4/subscribers \
+  -H 'Content-Type: application/json' \
+  -H 'X-Kit-Api-Key: YOUR_API_KEY' \
+  -d '{"email_address": "user@example.com", "first_name": "Jane"}'
+```
+
+Replace `YOUR_API_KEY` with your actual API key from Account Settings. The response returns the new subscriber's Kit ID, which you can store in your own database for future API calls.
+
+To apply a tag immediately on creation, include the tag ID in the request body:
+
+```bash
+curl -X POST https://api.kit.com/v4/subscribers \
+  -H 'Content-Type: application/json' \
+  -H 'X-Kit-Api-Key: YOUR_API_KEY' \
+  -d '{
+    "email_address": "user@example.com",
+    "first_name": "Jane",
+    "tags": [12345]
+  }'
+```
+
+Tag IDs are visible in your Kit dashboard URL when you view a tag, or retrievable via the `GET /tags` endpoint.
+
+## Webhooks
+
+Kit can push data to your own server in real time when subscriber events occur. This is useful when you want to trigger actions in your own application without polling the API.
+
+### Available Webhook Events
+- **Subscriber created** — A new subscriber is added to your account
+- **Subscriber unsubscribed** — A subscriber opts out
+- **Tag applied** — A specific tag is added to a subscriber
+- **Tag removed** — A tag is removed from a subscriber
+- **Purchase completed** — A Kit Commerce purchase is finalised
+
+### Setting Up a Webhook
+1. Go to **Account Settings → Developer → Webhooks**
+2. Click **Add Webhook**
+3. Enter your endpoint URL (a publicly accessible HTTPS URL on your server)
+4. Select the event(s) you want to receive
+5. Click **Save** — Kit will immediately send a test payload to verify the connection
+
+Kit signs webhook payloads with an HMAC signature so your server can verify that the request genuinely came from Kit. Check the `X-Kit-Signature` header in your webhook handler.

@@ -1,0 +1,107 @@
+---
+title: "Import Your Subscribers into Kit from Any Platform"
+sidebarTitle: "Importing Subscribers"
+description: "Move your existing subscribers into Kit from Mailchimp, Substack, or a CSV file. Learn how to import, tag, and verify permission before your first send."
+---
+
+If you're migrating from another email platform or consolidating subscribers from multiple sources, Kit's import tool makes the move straightforward. The most important thing to understand before you start: **every subscriber you import must have explicitly opted in to receive emails from you**. Kit takes this seriously, and so does your deliverability.
+
+## When to Import
+
+You'll need to import subscribers when you're:
+
+- **Migrating from another platform** — moving your list from Mailchimp, Substack, ActiveCampaign, Beehiiv, or any other provider
+- **Consolidating lists** — you've been collecting emails in a spreadsheet, a checkout system, or a different tool and want to bring them into Kit
+- **Adding offline subscribers** — attendees from an in-person event who signed up on paper or a tablet form
+- **Delivering a legacy lead magnet** — subscribers who opted in through an older system and need to be added to a new Kit sequence
+
+## Preparing Your CSV File
+
+Kit imports subscribers from CSV files. Before you upload anything, clean your file to avoid import errors and deliverability problems.
+
+**Required column:** `email` — Kit needs at minimum an email address column with that exact header.
+
+**Optional columns Kit recognises:**
+- `first_name`
+- `last_name`
+- Any custom field you've already created in Kit (matched by name)
+
+**Before you upload, check for:**
+
+- **Encoding** — save your file as UTF-8. If your CSV contains special characters (accented names, emoji) and isn't UTF-8, those characters will corrupt on import.
+- **Duplicate emails** — remove duplicates before uploading. Kit will skip duplicate emails, but a clean file gives you a cleaner subscriber count.
+- **Invalid addresses** — remove any obviously malformed addresses (missing `@`, no domain, etc.). These will fail on import and can flag your account for review.
+- **Unsubscribed contacts** — do not import people who previously unsubscribed from your list. This is a compliance violation and will hurt your sender reputation.
+- **Column headers** — make sure row 1 contains your column headers, not subscriber data. Kit's importer uses the first row to map fields.
+
+## The Import Process
+
+<Steps>
+  <Step title="Navigate to Subscribers and open the import tool">
+    In your Kit dashboard, go to **Subscribers** in the left navigation, then click **Import Subscribers** in the top right corner.
+  </Step>
+  <Step title="Upload your CSV file">
+    Click **Select a file** and choose your prepared CSV from your computer. Kit will process the file and show you a preview of the first few rows.
+  </Step>
+  <Step title="Map columns to Kit fields">
+    Kit displays each column header from your CSV and asks you to map it to the corresponding Kit field. Map your email column to **Email Address**, your first name column to **First Name**, and so on. For any column you don't want to import, select **Don't import this field**.
+  </Step>
+  <Step title="Apply tags to imported subscribers">
+    Before confirming the import, add at least one tag to all subscribers in this batch. At minimum, add a source tag (e.g., `imported-from-mailchimp` or `source: substack`). You can also apply interest or status tags if your CSV represents a specific segment.
+  </Step>
+  <Step title="Confirm permission and complete the import">
+    Kit will ask you to confirm that all subscribers in this import have given explicit permission to receive emails from you. Check the box honestly — importing non-permissioned contacts is grounds for account suspension. Click **Import** to start the process. For large lists, Kit processes imports in the background and notifies you when complete.
+  </Step>
+</Steps>
+
+<Warning>
+  Kit may review large imports. Be prepared to confirm that your subscribers opted in. Importing unverified or purchased contacts will result in account suspension. Kit's deliverability depends on the quality of all senders on the platform, and they enforce permission standards actively.
+</Warning>
+
+## Importing from Mailchimp
+
+Mailchimp makes it straightforward to export your list:
+
+1. In Mailchimp, go to **Audience → All contacts**
+2. Click **Export Audience** — Mailchimp generates a CSV
+3. Open the CSV and review the column headers. Mailchimp uses `Email Address`, `First Name`, and `Last Name` — rename `Email Address` to `email` before importing into Kit
+4. Remove any contacts with a status of "Unsubscribed" or "Cleaned" — do not import these
+5. Follow the standard Kit import process above
+
+Mailchimp's export includes merge fields and group data that Kit won't recognise. You can either delete those columns or map them to Kit custom fields if they contain data you want to keep.
+
+## Importing from Substack
+
+Substack allows you to export your subscriber list from your publication's dashboard:
+
+1. In Substack, go to **Settings → Exports**
+2. Click **Export your data** — Substack emails you a download link
+3. Find the subscriber CSV in the downloaded archive
+4. Substack's export includes email, name, and subscription status. Remove anyone with a status of "unsubscribed"
+5. Import into Kit using the standard process
+
+Note that Substack includes both free and paid subscribers in the export. Consider tagging them differently on import (e.g., `substack-paid` and `substack-free`) so you can communicate with each group appropriately in Kit.
+
+## The Permission Question
+
+Kit operates on a permission-based model. Every subscriber on your list should have actively opted in to receive emails from you — not just given you their business card, not just bought something from you once (unless they checked a marketing opt-in box), and definitely not been scraped from the web or purchased from a list vendor.
+
+If you're unsure whether a segment of your import has proper permission, err on the side of caution. It's better to import a smaller, clean list than to damage your sender reputation by emailing people who don't recognise you.
+
+Tagging imported subscribers by source (as described in the import steps) isn't just good organisation — it gives you a safety net. If a particular source generates a spike in spam complaints, you can immediately identify and suppress that segment.
+
+## Sending a Re-Introduction Email
+
+After any platform migration, send a re-introduction broadcast within 48 hours of completing your import. Don't assume your subscribers will recognise emails coming from a new platform with a different From address.
+
+Your re-introduction email should include:
+- A reminder of who you are and what you write about
+- An explanation that you've moved to a new platform (Kit)
+- What they can expect going forward — frequency, content type
+- A simple call to action to confirm they want to stay subscribed (optional, but good practice for list hygiene)
+
+<Tip>
+  After importing, send a re-introduction email within 48 hours. Remind subscribers who you are, that you've moved platforms, and what they can expect going forward. This single email will dramatically reduce confusion-driven unsubscribes and spam complaints in the weeks after your migration.
+</Tip>
+
+Keep your re-introduction email short, warm, and personal. This is not the time for a big promotion — it's the time to rebuild familiarity and trust with a list that may not have heard from you in a while.

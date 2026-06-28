@@ -1,0 +1,113 @@
+---
+title: "Send Broadcasts in Kit: One-Time Emails to Your List"
+sidebarTitle: "Broadcasts"
+description: "Broadcasts are Kit's one-time emails — perfect for newsletters, announcements, and promotions. Learn how to write, schedule, segment, and resend them."
+---
+
+A broadcast is the email you send when you have something to say right now — your weekly newsletter, a product launch, a limited-time announcement, a lesson tied to a current event. Unlike sequences, which are pre-written and sent automatically on a fixed schedule, broadcasts are one-time sends that go out to your list or a specific segment on a date and time you choose. They're the heartbeat of your relationship with your audience.
+
+## Broadcasts vs. Sequences
+
+Choosing the right tool matters:
+
+- Use a **broadcast** for timely, one-time content tied to a specific moment — your newsletter, a launch, an event, a flash sale, anything with a publication date
+- Use a **sequence** for automated, evergreen content that every new subscriber should receive — onboarding emails, a free email course, a welcome series
+
+Most email-first creators send a broadcast newsletter once a week or once a fortnight, and let sequences handle the automated background work of onboarding and nurturing new subscribers.
+
+## Creating and Sending a Broadcast
+
+<Steps>
+  <Step title="Create a new broadcast">
+    In your Kit dashboard, go to **Broadcasts** in the left navigation and click **New Broadcast**. Kit opens the broadcast composer with a blank email ready to write.
+  </Step>
+  <Step title="Write your subject line">
+    Your subject line is the single most important line you'll write. Keep it under 50 characters so it doesn't get truncated on mobile. Make it specific, curiosity-driven, or benefit-forward — but avoid clickbait that doesn't match the email content, which trains readers to distrust you.
+
+    If you're on the Creator plan or above, you can add a **second subject line** to A/B test. Kit sends each version to 15% of your list, waits for a set period, then automatically sends the winning subject line to the remaining 70%.
+  </Step>
+  <Step title="Choose your template and write your email">
+    Kit's composer gives you three modes:
+    - **Plain text** — a minimal email with no formatting. Reads like a personal email from a friend. High deliverability, high engagement for creator newsletters.
+    - **Rich text** — adds formatting (bold, italics, headings, images, buttons) while staying simple. Good for content-heavy newsletters with sections.
+    - **Custom HTML** — for full design control. Only use this if you have a designed template; poorly coded HTML can break on certain email clients.
+
+    Write your email. For newsletters, a conversational tone consistently outperforms corporate voice. Write to one person, not an audience.
+  </Step>
+  <Step title="Choose your recipient segment">
+    In the **Recipients** section, choose who receives this broadcast:
+    - **All subscribers** — your entire confirmed list
+    - **Subscribers who match a condition** — filter by tags, segments, form sign-up, location, or custom fields
+
+    For a weekly newsletter, sending to all subscribers is usually correct. For a product promotion, filter to exclude existing customers and optionally narrow to your most engaged subscribers.
+
+    Add **exclusions** in the same section — click **Exclude subscribers** and define who should not receive this email.
+  </Step>
+  <Step title="Preview, test, and send">
+    Click **Send a test email** to send a copy to your own address. Review it in your actual inbox — not just the Kit preview — on both desktop and mobile. Check every link, verify the formatting, and confirm the From name and subject line look right.
+
+    When you're satisfied, choose **Send now** to send immediately, or **Schedule** to pick a specific date and time. If you're on Creator Pro, you'll also see the option to use **Send Time Optimisation**, which sends each subscriber their copy at the time Kit predicts they're most likely to open it.
+  </Step>
+</Steps>
+
+<Tip>
+  Always send a test email to yourself before scheduling. Check that links work, the formatting looks right on mobile, and the from name and subject line are correct. It takes 60 seconds and will save you from the particular dread of discovering a broken link after sending to your entire list.
+</Tip>
+
+## Segmenting Your Recipients
+
+Sending to your whole list is right for your newsletter, but for promotions, announcements, and launches, precision targeting improves results and protects subscriber relationships.
+
+Common recipient configurations:
+
+- **New product launch** — all subscribers, excluding anyone tagged `customer: [product-name]`
+- **Re-engagement campaign** — subscribers with a `no-opens-90d` tag, or subscribers who haven't opened in the last 90 days (set this as a custom condition)
+- **Exclusive offer for loyal readers** — subscribers tagged `vip` or `active-reader`
+- **Content relevant to a specific interest** — subscribers tagged `interest: [topic]`
+
+The more relevant your email is to its recipients, the higher your open and click rates — and the lower your unsubscribe rate. Segmented sends routinely outperform full-list sends by 2–3x on engagement metrics.
+
+## Excluding Subscribers
+
+The **Exclude subscribers** condition is one of the most important settings in the broadcast composer, and one of the most overlooked. Before every promotional send:
+
+- Exclude subscribers who **already own the product** you're selling (tag: `customer: [product-name]`)
+- Exclude subscribers who are in an active launch sequence for a different product
+- Consider excluding subscribers who haven't opened any email in 90+ days from high-stakes launches — their low engagement can dilute your open rate metrics in ways that affect deliverability
+
+## A/B Testing Subject Lines
+
+On the Creator plan and above, Kit's built-in A/B testing lets you test two subject lines on the same broadcast. Kit sends Version A to 15% of your list and Version B to another 15%, then waits for a period you define (typically 4 hours). The version with the higher open rate automatically sends to the remaining 70%.
+
+Use A/B testing to build real intuition about what subject lines your specific audience responds to. Test one variable at a time — subject line only, not subject line AND from name — so you can draw clean conclusions.
+
+## Resending to Non-Openers
+
+Kit lets you resend any broadcast to subscribers who didn't open the first version. To do this, find the broadcast in your Broadcasts list, click into it, and select **Resend to non-openers**. Write a new subject line — this is the whole point, since the same subject line that didn't earn an open the first time won't perform better the second time — and schedule the resend 48–72 hours after the original.
+
+<Note>
+  The "resend to non-openers" feature typically adds 20–30% more opens. Use it for important emails — a launch announcement, a limited-time offer, a piece of content you genuinely want everyone to see — but don't do it every week or you'll train your audience to ignore the first send and wait for the follow-up.
+</Note>
+
+## Scheduling and Send Time Optimisation
+
+When you schedule a broadcast, Kit sends it at the exact date and time you specify, based on your account's time zone (set in **Settings → Account**).
+
+If you're on the **Creator Pro** plan, Send Time Optimisation (STO) is available. Rather than sending to your entire list at 9am your time, STO analyses each subscriber's historical open behaviour and sends their copy at the time they're individually most likely to open. This can meaningfully improve open rates on large lists, since your subscribers are spread across time zones and have different email habits.
+
+For most solopreneurs, consistent scheduling — same day, same time every week — matters more than optimised timing. Your subscribers develop habits around when to expect your email.
+
+## Broadcast Analytics
+
+After your broadcast sends, Kit's analytics show you:
+
+| Metric | What it tells you |
+|---|---|
+| **Open rate** | The percentage of delivered emails that were opened at least once. Industry average is 20–30% for creator newsletters; 40%+ is excellent. |
+| **Click rate** | The percentage of delivered emails where at least one link was clicked. 2–5% is typical; 10%+ is strong for content with a clear CTA. |
+| **Unsubscribes** | The number of subscribers who unsubscribed after this send. A spike (more than 0.5% of your list) signals a relevance or frequency problem. |
+| **Revenue** | If you have Kit Commerce links in the email, Kit tracks sales attributed to clicks from this broadcast. |
+
+Open rates have become less reliable since Apple's Mail Privacy Protection (introduced in 2021) pre-fetches emails to load tracking pixels, inflating open rates for Apple Mail users. Treat open rates as a directional signal, not a precise measure. Click rates are a more reliable indicator of genuine engagement.
+
+Review your broadcast analytics 24–48 hours after sending, when most opens and clicks have already occurred. Use what you learn — which subject lines, topics, and formats get the most clicks — to sharpen your next send.

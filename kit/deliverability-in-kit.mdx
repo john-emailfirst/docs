@@ -1,0 +1,125 @@
+---
+title: "Optimise Deliverability in Kit: Technical Setup Guide"
+sidebarTitle: "Deliverability"
+description: "Configure Kit's sending infrastructure to maximise inbox placement. Covers custom domains, DNS authentication, bounce handling, and complaint monitoring."
+---
+
+Getting your emails into inboxes — not spam folders — is the foundation everything else in email marketing is built on. Kit handles a lot of deliverability infrastructure for you behind the scenes, but the single most important thing you can do is complete the technical setup correctly. This guide walks you through every step, from connecting a custom sending domain to monitoring your reputation in Gmail's Postmaster Tools.
+
+## Why Kit-Specific Deliverability Setup Matters
+
+Kit sends emails on shared infrastructure, which means many senders share the same sending IP pools. Your domain reputation becomes your primary deliverability lever. Gmail, Outlook, and Apple Mail evaluate your domain (the part after the @ in your from address) independently of the shared IP. A correctly configured domain with a healthy engagement history will land in the inbox consistently — even from shared infrastructure.
+
+<Warning>
+  Do not mass-send to a cold list immediately after importing. If you've imported a list from another platform or collected emails over a long period without emailing them, warm up gradually. Start with your most engaged subscribers — those who've opened or clicked recently — and expand to the rest over two to four weeks. Sending a large volume of cold email is the fastest way to trigger spam filters and permanently damage your domain reputation.
+</Warning>
+
+## Full Technical Deliverability Setup
+
+<Steps>
+  <Step title="Connect a custom sending domain">
+    By default, Kit sends from a kit.com subdomain. Emails sent from `yourname@gmail.com` or from a generic platform domain land in spam far more often than emails from your own domain.
+
+    To connect your domain:
+    1. Go to **Account Settings → Sending Domains**
+    2. Click **Add Domain**
+    3. Enter your domain (e.g., `yourdomain.com`)
+    4. Kit will generate the DNS records you need to add
+
+    Your from address will become something like `hello@yourdomain.com` — professional, trustworthy, and deliverability-friendly.
+  </Step>
+  <Step title="Add SPF and DKIM records to your DNS">
+    Kit provides the exact DNS records you need. Copy them and add them to your domain registrar's DNS settings. Common registrars:
+
+    - **Namecheap** — Advanced DNS → Add New Record
+    - **Cloudflare** — DNS → Records → Add Record
+    - **GoDaddy** — DNS Management → Add
+
+    **SPF** (Sender Policy Framework) tells receiving mail servers that Kit is authorised to send email on behalf of your domain.
+
+    **DKIM** (DomainKeys Identified Mail) adds a cryptographic signature to your emails, proving they haven't been tampered with in transit.
+
+    After adding both records, return to **Account Settings → Sending Domains** and click **Verify**. Kit checks DNS propagation and marks each record as verified. DNS propagation can take up to 48 hours, though it's usually faster.
+  </Step>
+  <Step title="Set up DMARC">
+    DMARC (Domain-based Message Authentication, Reporting, and Conformance) tells receiving mail servers what to do with emails that fail SPF or DKIM checks. It also protects your domain from being spoofed by spammers.
+
+    Start with a monitoring-only policy so you can collect data before enforcing anything:
+
+    ```
+    v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com
+    ```
+
+    Add this as a **TXT record** on your DNS, using `_dmarc` as the hostname. The `rua` address receives aggregate reports from receiving mail servers — use an email address you'll check, or a DMARC reporting service like Postmark's free DMARC tool.
+
+    Once you've confirmed your SPF and DKIM are passing consistently (check after 2–4 weeks), upgrade to an enforcement policy:
+
+    ```
+    v=DMARC1; p=quarantine; rua=mailto:dmarc@yourdomain.com
+    ```
+
+    Note: Gmail now requires DMARC for bulk senders. Setting it up is not optional if you send to Gmail addresses regularly.
+  </Step>
+  <Step title="Verify your setup in Kit">
+    Go to **Account Settings → Sending Domains**. Kit shows the current verification status for each DNS record:
+
+    - ✅ **SPF** — Verified
+    - ✅ **DKIM** — Verified
+    - ✅ **DMARC** — Detected
+
+    If any record shows as unverified, double-check the exact values you entered in your DNS panel. A single character error will cause verification to fail.
+  </Step>
+  <Step title="Set your from address and from name">
+    In **Account Settings → Email**, set your default from address to your new custom domain email (e.g., `hello@yourdomain.com`) and your from name to something subscribers will recognise — your name, your newsletter name, or both.
+
+    Consistency matters. Using the same from name and address in every email trains inbox providers and subscribers to trust your messages.
+  </Step>
+  <Step title="Set up Google Postmaster Tools">
+    Google Postmaster Tools is a free service that shows you your domain reputation in Gmail. It's the single best external signal for how Gmail views your sending.
+
+    1. Go to [postmaster.google.com](https://postmaster.google.com)
+    2. Add and verify your domain
+    3. Check the **Domain Reputation** dashboard after your next few sends
+
+    Aim for a **High** or **Medium** domain reputation. A **Low** or **Bad** rating means Gmail is routing your email to spam for a significant portion of your subscribers.
+  </Step>
+</Steps>
+
+<Tip>
+  Kit's 'Sending Domains' page in Account Settings shows the current verification status of your SPF, DKIM, and DMARC records. Check this page whenever deliverability issues arise — it's your first diagnostic stop. A missing or broken record is the most common cause of sudden deliverability drops.
+</Tip>
+
+## Understanding Kit's Bounce Handling
+
+Kit manages bounces automatically so you don't have to clean your list manually:
+
+- **Hard bounces** — The email address doesn't exist or has permanently rejected the message. Kit immediately marks these addresses as undeliverable and stops sending to them. Hard bounces are removed from your active subscriber count.
+- **Soft bounces** — Temporary delivery failures (full mailbox, server temporarily unavailable). Kit monitors soft bounces over multiple sends. After repeated soft bounces, Kit may pause delivery to that address.
+- **Bounce rate threshold** — Keep your hard bounce rate below 2%. Rates above this signal to inbox providers that your list is poorly maintained, which harms deliverability for all your other subscribers.
+
+If you're importing a list, always validate email addresses before importing. Free tools like NeverBounce or ZeroBounce can flag invalid addresses before they become hard bounces in Kit.
+
+## Spam Complaint Monitoring
+
+Kit monitors spam complaint rates across all senders on its platform. If your complaint rate rises above acceptable thresholds, Kit will flag your account for review and may temporarily suspend sending.
+
+To keep complaint rates low:
+- Always use confirmed opt-in (double opt-in) for new subscribers
+- Never import purchased, rented, or borrowed lists
+- Make unsubscribing easy — a buried unsubscribe link causes spam complaints
+- Set accurate expectations at sign-up so subscribers know what they're getting
+
+The acceptable spam complaint rate is generally below 0.1% (1 complaint per 1,000 emails). Google's own guidance flags rates above 0.08% as problematic.
+
+## Warming Up a New Domain
+
+If you're starting from scratch with a brand-new domain — not migrating from an existing warm domain — you need to build reputation gradually:
+
+| Week | Send volume |
+|---|---|
+| Week 1 | 200–500 emails to your most engaged subscribers |
+| Week 2 | 500–1,000 emails |
+| Week 3 | 1,000–3,000 emails |
+| Week 4+ | Scale to full list volume |
+
+If you're migrating from another platform with an established domain, your reputation moves with you — no warm-up required.

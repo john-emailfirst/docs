@@ -1,0 +1,88 @@
+---
+title: "Email Deliverability: How to Land in the Inbox, Not Spam"
+sidebarTitle: "Deliverability"
+description: "Deliverability decides whether your emails reach the inbox. Learn the technical setup and sending habits that protect your sender reputation over time."
+---
+
+You can write the best email in the world and it still won't matter if it lands in spam. Deliverability is the invisible layer beneath everything else in email marketing — it determines whether your subscribers actually see what you send. For solopreneurs, it's one of the few technical areas worth spending real time on, because the cost of getting it wrong compounds quietly until you notice your open rates have collapsed and you're not sure why.
+
+## What Deliverability Actually Means
+
+Deliverability is your ability to land in the inbox — not in the spam folder, not automatically filtered away — for the majority of your subscribers. It's determined by your sender reputation, which is a score that email providers like Gmail and Outlook assign to your sending domain based on how recipients interact with your emails.
+
+The math is counterintuitive but important: a list of 2,000 highly engaged subscribers with 95% deliverability will generate more opens, clicks, and revenue than a list of 5,000 cold subscribers with 50% deliverability. List size is vanity. Inbox placement is what actually drives results.
+
+## The Two Layers of Deliverability
+
+Deliverability breaks down into two distinct layers. The first you handle once; the second you maintain continuously.
+
+**Layer 1 — Technical setup**: Authentication records (SPF, DKIM, DMARC) that tell email providers your emails are legitimately coming from you, not a spammer spoofing your domain. This is done once and rarely needs revisiting.
+
+**Layer 2 — Engagement signals**: How your subscribers behave when your emails arrive. Opens, clicks, replies, and forwards all improve your reputation. Spam complaints, ignoring your emails, and mass unsubscribes hurt it. This layer is ongoing.
+
+Most solopreneurs skip the technical setup because it looks intimidating. Don't. It takes less than 30 minutes and the protection it provides is significant.
+
+## Setting Up Technical Deliverability in Kit
+
+<Steps>
+  <Step title="Verify your sending domain in Kit">
+    In your Kit account, navigate to Settings → Email and add your custom domain. Kit will confirm the domain is associated with your account before allowing you to send from it. You'll need access to your domain registrar (e.g. Namecheap, Cloudflare, GoDaddy) to complete the next steps.
+  </Step>
+  <Step title="Add your SPF record to your DNS">
+    SPF (Sender Policy Framework) tells email providers which servers are authorised to send email on behalf of your domain. Kit provides the exact SPF record value you need to add. Go to your domain registrar's DNS settings, create a new TXT record, and paste in the value Kit gives you. If you already have an SPF record, you'll need to merge the values rather than create a duplicate.
+  </Step>
+  <Step title="Add your DKIM record to your DNS">
+    DKIM (DomainKeys Identified Mail) adds a cryptographic signature to your emails that proves they haven't been tampered with in transit. Kit generates a DKIM record for you — add it as a CNAME or TXT record in your DNS settings, exactly as specified. DNS changes typically propagate within a few hours, sometimes up to 48 hours.
+  </Step>
+  <Step title="Set up your custom sending domain">
+    By default, Kit sends from a shared domain. Switch to your own domain (yourname@yourdomain.com) in Kit's settings once your SPF and DKIM records are live. Sending from a custom domain ties your sender reputation to your own domain rather than a shared pool — giving you full control over your reputation and making your from-address more recognisable to subscribers.
+  </Step>
+  <Step title="Send a test email and verify the headers">
+    Send a test email to a Gmail account you control. Open the email, click the three-dot menu, and select "Show original." In the email headers, look for `dkim=pass` and `spf=pass`. Both should show as passing. If either fails, revisit your DNS records — a typo or propagation delay is the most common cause.
+  </Step>
+</Steps>
+
+<Warning>
+  Never buy email lists. Even lists marketed as "opt-in" or "verified" will destroy your sender reputation. Those subscribers never opted in to hear from *you* — they'll mark your emails as spam at rates that will get your account flagged within days, and rebuilding a damaged sender reputation takes months. Grow your list organically, always.
+</Warning>
+
+## Content Practices That Help Deliverability
+
+Your sender reputation isn't just about technical setup — it's shaped by every email you send. These practices reduce the likelihood of spam filters catching your emails:
+
+- **Write like a human.** Avoid excessive capitalisation, exclamation points, and words like "FREE!!!" or "ACT NOW." Spam filters are trained on spammy language patterns. Don't write like a spammer.
+- **Keep your image-to-text ratio reasonable.** Emails that are mostly images with little text are a spam filter red flag. If you use images, include meaningful text alongside them.
+- **Use a consistent from-name.** Subscribers open emails from people they recognise. If your from-name changes, subscribers may not recognise you and skip or spam your email.
+- **Always include a clear unsubscribe link.** This is legally required in most jurisdictions (CAN-SPAM, GDPR, CASL) and it's good for deliverability — a clean unsubscribe is far better for your reputation than a spam complaint.
+
+<Tip>
+  Ask new subscribers to add your email address to their contacts in your first welcome email. Include a one-line instruction: "To make sure you never miss an issue, add [yourname@yourdomain.com] to your contacts." It takes subscribers five seconds, and it immediately improves inbox placement for that subscriber by creating a trusted sender signal.
+</Tip>
+
+## Engagement-Based Practices
+
+Long-term deliverability is driven by engagement signals. Email providers watch how recipients interact with your emails over time. These habits protect your reputation:
+
+- **Clean inactive subscribers regularly.** Unengaged subscribers drag down your engagement metrics. Regular list hygiene keeps your average open rate healthy — see the [List Hygiene](/email-first/list-hygiene) page for a full process.
+- **Run re-engagement sequences before removing cold subscribers.** Give inactive subscribers one last chance to re-engage before you remove them. The ones who re-engage improve your metrics; the ones who don't are cleaned out cleanly.
+- **Segment your most engaged readers.** For time-sensitive announcements — launches, limited offers, important updates — send first to your most engaged segment. Higher early engagement signals help that send perform well in spam filters for the broader list.
+
+## Red Flags to Watch For
+
+These are signs your deliverability is degrading and you need to investigate:
+
+- **Sudden drop in open rates** (not explained by a seasonal lull or a less compelling subject line)
+- **Emails appearing in Gmail's Promotions tab consistently** — while Promotions isn't spam, a shift there can indicate engagement has dropped
+- **Emails landing in spam** — test by sending to multiple email clients (Gmail, Outlook, Apple Mail)
+- **Increased bounce rate** — above 2% hard bounce rate is a signal your list has quality problems
+- **Spam complaint rate above 0.1%** — Google's published threshold before they begin filtering your emails
+
+<Note>
+  Gmail's Promotions tab isn't the same as spam. Emails in Promotions are delivered and do get opened — many subscribers check the tab regularly. Your primary deliverability concern should be inbox versus spam, not inbox versus Promotions. Chasing Promotions tab placement by removing all formatting can backfire if it reduces the quality of your emails for readers.
+</Note>
+
+## Monitor Your Reputation with Google Postmaster Tools
+
+Google Postmaster Tools is a free dashboard that shows you your domain reputation and IP reputation as scored by Gmail — the email provider used by the majority of your subscribers. Set it up once and check it monthly.
+
+To set it up: go to [postmaster.google.com](https://postmaster.google.com), add your sending domain, verify ownership via a DNS TXT record (same process as DKIM), and you'll start seeing reputation data after you've sent a sufficient volume of emails to Gmail addresses. The key metric to watch is "Domain Reputation" — aim for High or Medium. If it drops to Low or Bad, act immediately: clean your list, pause sends, and investigate what changed.

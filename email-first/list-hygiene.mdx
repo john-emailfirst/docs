@@ -1,0 +1,104 @@
+---
+title: "List Hygiene: Keep Your Email List Healthy and Engaged"
+sidebarTitle: "List Hygiene"
+description: "Regular list hygiene removes cold subscribers, reduces costs, and protects your deliverability. Learn how often to clean your list and how to do it in Kit."
+---
+
+List hygiene is the practice of regularly identifying and removing subscribers who are no longer engaging with your emails. It's one of the least glamorous parts of running an email-first business — and one of the most important. A list full of unengaged subscribers doesn't just hurt your deliverability metrics; it inflates your costs, skews your data, and makes it harder to understand what's actually working. The sooner you treat list hygiene as a routine maintenance task rather than an emergency response, the healthier your business will be.
+
+## Why List Hygiene Matters
+
+Every email platform charges you based on subscriber count. If 30% of your list hasn't opened an email in six months, you're paying for 30% of your list to harm your deliverability. That's the uncomfortable truth: unengaged subscribers aren't neutral — they're actively working against you.
+
+Email providers like Gmail track engagement signals across your sends. When a large portion of your list consistently ignores your emails, those providers start routing your emails to spam — not just for the inactive subscribers, but for everyone on your list. Your engaged subscribers start seeing your emails less often because of the cold ones you're holding onto.
+
+The paradox of list hygiene is that removing subscribers makes your list more powerful. A clean list of 2,000 engaged readers will outperform a bloated list of 6,000 mixed subscribers on every metric that matters: open rate, click rate, deliverability, and revenue per subscriber.
+
+## Defining "Unengaged"
+
+An unengaged subscriber is someone who hasn't opened or clicked any of your emails within a defined window. The right window depends on how often you send:
+
+- **Daily or multiple times per week**: 60–90 days of no engagement
+- **Weekly**: 90–120 days of no engagement
+- **Bi-weekly or monthly**: 120–180 days of no engagement
+
+Apply some judgement here. A subscriber who purchased from you six months ago but hasn't opened recently deserves a different approach than someone who signed up for a lead magnet and never engaged once.
+
+## The Re-Engagement Sequence
+
+Before you remove cold subscribers, run a re-engagement campaign. Some of these people are genuinely interested — they're just distracted, or your emails have been landing in spam without either of you knowing. A well-written win-back sequence recovers a meaningful percentage of cold subscribers and gives you a clean conscience about removing the rest.
+
+<Steps>
+  <Step title="Email 1: 'Still want to hear from me?'">
+    Keep this email short, personal, and low-pressure. Don't reference their inactivity accusatorially. Instead, acknowledge that inboxes get busy and simply ask if they still want to receive your emails. Give them a clear way to confirm they're still in — a button or a reply. Use a subject line that stands out from your regular content, like "Quick question" or "Still there?" Plain-text format often performs better here than a designed email, because it feels genuinely personal.
+  </Step>
+  <Step title="Email 2 (3 days later): 'Here's what you've been missing'">
+    If they didn't engage with the first email, send a second one three days later. This time, remind them of the value they've been getting — link to your three best recent pieces of content with one-line descriptions. Give them a concrete reason to stay. This email answers the implicit question: "Why should I keep getting these?" Make the answer obvious and specific to your newsletter's actual strengths.
+  </Step>
+  <Step title="Email 3 (3 days later): 'I'm removing you from my list'">
+    Be direct and honest. Tell them this is the last email you'll send before removing them from your list. Explain that you want to keep your list to people who actually want to be on it. Include one final re-engagement link. This email consistently outperforms the earlier ones because it creates genuine urgency — some subscribers will click just because they don't want to miss out. Those who don't engage after this email are ready to be cleaned.
+  </Step>
+</Steps>
+
+<Tip>
+  Before removing cold subscribers, cross-reference them against your customer records. A subscriber who made a purchase six months ago but hasn't opened recently is a different kind of cold — they know your work, they've paid for it, and they may be in a dormant phase rather than a disengaged one. Consider a separate, softer re-engagement approach for past customers before applying your standard cleaning process.
+</Tip>
+
+## Running List Hygiene in Kit
+
+Kit gives you the tools to identify, segment, and manage cold subscribers without having to export spreadsheets.
+
+**To find unengaged subscribers**: Use Kit's Segments feature to create a segment filtered by email activity — specifically, subscribers who have not opened any email in the past 90 (or 120 or 180) days, depending on your cadence. You can refine this further by excluding subscribers who joined recently (within the last 30 days) to avoid cleaning out new subscribers who haven't had time to engage.
+
+**To tag them**: Before any action, tag the segment as `cold-[date]` (e.g. `cold-2024-Q3`). This creates a record and allows you to target them with your re-engagement sequence using Kit's automation.
+
+**To bulk-unsubscribe after the sequence**: Once your re-engagement sequence completes and you've filtered out those who re-engaged, use Kit's bulk actions to unsubscribe the remaining cold subscribers. Export a backup CSV before you do — you'll want a record of who was removed and when.
+
+## When to Clean Your List
+
+Build list hygiene into your calendar as a recurring task, not something you do reactively when your open rates crash.
+
+- **3 or more emails per week**: Clean quarterly (every 3 months)
+- **Weekly sends**: Clean every 6 months
+- **Bi-weekly or monthly sends**: Clean once a year, but monitor bounce rates and complaint rates monthly
+
+<Warning>
+  Avoid the temptation to clean "later." Every month you delay, your deliverability degrades incrementally — and the damage is slow enough that you may not notice until it's significant. Add a recurring calendar reminder for your list hygiene review and treat it with the same priority as your content schedule. The 30 minutes you spend cleaning your list is worth more than most content you could write that day.
+</Warning>
+
+## Hard Bounces vs. Soft Bounces
+
+Not all undeliverable emails are the same:
+
+- **Hard bounces** occur when an email address is permanently invalid — the address doesn't exist, the domain has expired, or the recipient has blocked you entirely. Kit automatically suppresses hard bounces and removes them from your active list. You don't need to manage these manually.
+- **Soft bounces** occur when delivery fails temporarily — the recipient's inbox is full, their mail server is down, or a transient error occurred. Kit will retry soft bounces automatically. If an address soft-bounces repeatedly over several sends, treat it as a hard bounce and suppress it manually.
+
+Monitor your bounce rate in Kit's analytics dashboard. A hard bounce rate above 2% is a signal that your list acquisition process has a quality problem — you may be collecting invalid addresses through fake signups, typos at opt-in, or lead magnets that attract low-quality subscribers.
+
+## Spam Complaints
+
+Keep your spam complaint rate below 0.1%. Google has published this as the threshold above which Gmail begins filtering your emails more aggressively. At 0.3%, you're at serious risk of systematic filtering.
+
+To monitor complaint rates, use Google Postmaster Tools (see the [Deliverability](/email-first/deliverability) page). Kit also surfaces complaint data in your account's compliance dashboard.
+
+If your complaint rate spikes after a specific send, investigate what was different about that email — was it more promotional than usual? Did it go to a segment you haven't emailed recently? Was the subject line misleading? Fix the root cause before your next send.
+
+## What to Do With Removed Subscribers
+
+Follow this process when removing a cohort of cold subscribers:
+
+1. **Export a backup first.** Download a CSV of the subscribers you're about to remove, including their join date, tags, and last-engagement date. Store it somewhere accessible.
+2. **Tag before removing.** Rather than deleting subscribers from Kit, tag them as `cleaned` before unsubscribing them. This preserves a record of who was on your list and when, which is useful for GDPR compliance and for your own analytics.
+3. **Suppress rather than delete.** Use Kit's suppression list for hard bounces and chronic non-openers. Suppressed contacts won't receive emails but remain in your account as a record — useful if a removed subscriber signs up again in the future.
+
+<Accordion title="How do I find unengaged subscribers in Kit?">
+  In Kit, go to **Subscribers** and use the filter panel to create a custom view. Filter by "Has not opened" and set the time period to match your cleaning threshold (90, 120, or 180 days). Exclude subscribers who joined in the last 30 days to avoid catching new subscribers before they've had a chance to engage. Save this as a Segment so you can reuse the filter each time you run a hygiene cycle. From the segment view, you can bulk-tag subscribers and feed them into an automation for your re-engagement sequence.
+</Accordion>
+
+<Accordion title="What if my open rates are low due to Apple Mail Privacy Protection?">
+  Apple's Mail Privacy Protection (MPP), launched in 2021, pre-loads email content — including tracking pixels — which inflates open rates for Apple Mail users and makes open data unreliable for that segment. If a significant portion of your list uses Apple Mail, your open rate data overstates engagement, but it also means your "unengaged" segment may include Apple users who are actually reading your emails without being tracked. To work around this, use click-based engagement as your primary hygiene signal rather than opens alone. A subscriber who hasn't clicked anything in 180 days is a more reliable indicator of true disengagement than one who simply hasn't triggered an open pixel.
+</Accordion>
+
+<Accordion title="Should I offer an incentive to re-engage subscribers?">
+  It depends on why they went cold. If your list attracted subscribers primarily through a lead magnet and they never truly engaged with your content, offering another incentive may just add another round of low-quality engagement without addressing the underlying issue. For subscribers who were once engaged and have drifted, an incentive — a free resource, early access to something, a relevant bonus — can be genuinely effective in your second re-engagement email. The cleaner approach is to lead with your best content and a clear value statement. If that doesn't re-engage them, an incentive probably won't solve a content-fit problem.
+</Accordion>

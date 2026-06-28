@@ -1,0 +1,128 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "willow",
+  "name": "Email-First Business",
+  "colors": {
+    "primary": "#2c5bf9",
+    "light": "#c6ddff",
+    "dark": "#1e42ae"
+  },
+  "favicon": {
+    "light": "/images/EmailFirstLogo500x500.png",
+    "dark": "/images/EmailFirstLogo500x500.png"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Kit Guide",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "kit/account-setup",
+              "kit/overview",
+              "kit/importing-subscribers",
+              "kit/verify-sending-domain.mdx"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "kit/forms-and-landing-pages",
+              "kit/tags-and-segments",
+              "kit/broadcasts"
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              "kit/sequences",
+              "kit/automations",
+              "kit/visual-automations"
+            ]
+          },
+          {
+            "group": "Selling & Commerce",
+            "pages": [
+              "kit/kit-commerce",
+              "kit/tips-and-recommendations"
+            ]
+          },
+          {
+            "group": "Best Practices",
+            "pages": [
+              "kit/deliverability-in-kit",
+              "kit/analytics-and-reporting",
+              "kit/integrations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Email-First Framework",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "email-first/what-is-email-first",
+              "email-first/why-email"
+            ]
+          },
+          {
+            "group": "Strategy",
+            "pages": [
+              "email-first/positioning",
+              "email-first/niche-and-audience",
+              "email-first/content-strategy"
+            ]
+          },
+          {
+            "group": "List Building",
+            "pages": [
+              "email-first/lead-magnets",
+              "email-first/landing-pages",
+              "email-first/growth-channels"
+            ]
+          },
+          {
+            "group": "Monetisation",
+            "pages": [
+              "email-first/revenue-models",
+              "email-first/selling-to-your-list",
+              "email-first/sponsorships"
+            ]
+          },
+          {
+            "group": "Retention",
+            "pages": [
+              "email-first/subscriber-experience",
+              "email-first/deliverability",
+              "email-first/list-hygiene"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Start with Kit",
+      "href": "https://kit.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://linkedin.com/in/jbellingham",
+      "youtube": "https://youtube.com/@emailfirstco"
+    }
+  },
+  "description": "Build a profitable email-first business using Kit. Guidance and support from a Kit Certified Expert.",
+  "logo": {
+    "light": "/images/eflogodarkbackground(2).png",
+    "dark": "/images/eflogolightbackground(1).png"
+  },
+  "background": {
+    "decoration": "gradient"
+  }
+}

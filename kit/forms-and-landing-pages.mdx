@@ -1,0 +1,115 @@
+---
+title: "Kit Forms and Landing Pages: Capture More Subscribers"
+sidebarTitle: "Forms & Landing Pages"
+description: "Kit's forms and landing pages are how subscribers join your list. Learn how to create, customise, embed, and optimise them for higher conversion rates."
+---
+
+Every subscriber on your list joined through a form or a landing page. These are the front doors of your email business, and getting them right — clear headline, specific offer, frictionless sign-up — is the highest-leverage thing you can do for list growth. Kit gives you a full suite of opt-in tools, from embeddable inline forms to standalone hosted pages, all connected directly to your sequences and automations.
+
+## Forms vs. Landing Pages
+
+Kit uses the same underlying builder for both forms and landing pages, but they serve different purposes:
+
+- **Forms** are embeddable opt-in widgets you add to pages that already exist on your website. A reader arrives on your blog post, sees your form mid-content or as a pop-up, and subscribes without leaving the page.
+- **Landing pages** are standalone, Kit-hosted pages with no navigation and no distractions — just your offer and a sign-up box. You send people directly to the landing page URL to subscribe.
+
+Use a form when your website already attracts traffic. Use a landing page when you're promoting an opt-in through social media, a podcast mention, a collaboration, or a paid ad — anywhere the subscriber doesn't start on your site.
+
+## Form Types in Kit
+
+<Tabs>
+  <Tab title="Inline Form">
+    An inline form embeds directly inside your page content — typically below a blog post introduction, at the end of an article, or inside a dedicated "subscribe" section. It's always visible without any user interaction required.
+
+    **Best for:** Blog posts, resource pages, about pages, and anywhere you want a persistent, non-intrusive opt-in. Inline forms typically convert 1–3% of page visitors, but they're always visible and never annoying.
+
+    To embed an inline form, copy the JavaScript or HTML snippet from **Forms → your form → Embed** and paste it where you want it to appear in your site's code or CMS.
+  </Tab>
+  <Tab title="Modal Form">
+    A modal (pop-up) form appears as an overlay on top of your page content, triggered by a time delay, scroll depth, exit intent, or a button click. It interrupts the reader's experience briefly to present the opt-in offer.
+
+    **Best for:** Maximising conversions on high-traffic pages. Modal forms consistently outperform inline forms in raw conversion rate — often 3–7% of visitors — because they demand attention. Use them on your highest-traffic content, but configure the trigger thoughtfully (exit intent or 60% scroll depth tends to be less disruptive than a 2-second delay).
+
+    Kit also supports **slide-in** and **sticky bar** variants, which are less intrusive than a full modal but still draw attention. Slide-ins appear from the bottom corner; sticky bars pin to the top or bottom of the browser window.
+  </Tab>
+  <Tab title="Landing Page">
+    A Kit landing page is a fully hosted, standalone page at a `yourname.ck.page` URL (or your custom subdomain). It has no header navigation, no sidebar, and no links out — just your headline, your offer, and a subscribe form.
+
+    **Best for:** Promoting a specific lead magnet, running a challenge or event sign-up, collaborations with other creators, or any situation where you're driving traffic from off your website and want zero distractions.
+
+    Kit's landing page builder includes pre-designed templates you can customise with your own copy, colours, and images — no design skills required. Your landing page goes live instantly at a public URL.
+  </Tab>
+</Tabs>
+
+## Creating Your First Landing Page with Lead Magnet Delivery
+
+The most common use case for a Kit landing page is offering a free lead magnet — an ebook, checklist, template, mini-course, or any other resource — in exchange for an email address. Here's how to set that up end to end.
+
+<Steps>
+  <Step title="Create a new landing page">
+    Go to **Forms** in your Kit dashboard and click **New Form**. When prompted to choose a type, select **Landing Page**. Browse the template gallery and choose a layout that fits your offer — minimal templates typically convert best for direct opt-ins.
+  </Step>
+  <Step title="Write your headline and description">
+    Your headline should name the specific outcome or asset your subscriber will get. "Free checklist" is weak. "The 12-point editorial checklist I use before every newsletter send" is strong. Your description should reinforce the value in one or two sentences. Be concrete and specific.
+  </Step>
+  <Step title="Customise the design">
+    Update the button text (avoid "Subscribe" — use "Send me the checklist" or "Get instant access"), adjust colours to match your brand, and add a cover image of your lead magnet if you have one. Kit's editor updates the preview in real time.
+  </Step>
+  <Step title="Set up the incentive email">
+    In your landing page settings, click **Incentive** and enable the incentive email. Write a short, friendly email that delivers your lead magnet. If your lead magnet is a PDF, upload it directly to Kit and the link will be included automatically. If it's hosted elsewhere (Notion, Google Drive, your website), paste the URL into the email body.
+  </Step>
+  <Step title="Configure the confirmation settings">
+    Kit defaults to a double opt-in flow — subscribers confirm their email before receiving the incentive. This is best practice for deliverability and compliance. You can switch to single opt-in if you prefer, but double opt-in produces a cleaner list of engaged subscribers.
+  </Step>
+  <Step title="Publish and share your landing page URL">
+    Click **Save** and then **Publish**. Kit gives you a public URL immediately — `yourname.ck.page/your-landing-page`. Share this URL in your social bios, podcast show notes, YouTube descriptions, or paid ads.
+  </Step>
+</Steps>
+
+<Tip>
+  Set the incentive email in your form settings to deliver your lead magnet automatically. This is simpler than triggering a sequence and works perfectly for single-asset delivery. Save sequences for multi-email onboarding flows where you want to deliver content over several days.
+</Tip>
+
+## Customising Your Forms
+
+Kit's form editor lets you change every visible element:
+
+- **Headline** — the primary hook. Make it benefit-focused and specific.
+- **Description** — one or two sentences expanding on the value. Optional, but useful for complex offers.
+- **Fields** — by default, Kit only asks for an email address. You can add a first name field (which enables personalised emails), but every additional field reduces conversions. Never ask for more than email and first name on a cold opt-in form.
+- **Button text** — use action-oriented language that describes what the subscriber gets, not what they're doing (not "Subscribe", but "Get the free guide").
+- **Colours and fonts** — match your website's brand. Kit's editor gives you full control over background colour, text colour, and button colour.
+
+## Embedding Forms on Your Website
+
+Kit gives you two embed options for inline and modal forms:
+
+- **JavaScript snippet** — a single `<script>` tag. The form loads dynamically after page load, and Kit can update the form without you re-embedding. Use this for most websites including WordPress, Squarespace, and Webflow.
+- **HTML snippet** — a static embed with no JavaScript dependency. Use this for static site generators (Hugo, Jekyll, Eleventy) or environments where you can't run external scripts.
+
+Find the embed code under **Forms → your form → Embed**.
+
+## Custom Domains for Landing Pages
+
+By default, your Kit landing pages live at `yourname.ck.page`. You can point a custom subdomain to your Kit pages instead — for example, `subscribe.yourdomain.com`.
+
+To set this up, go to **Settings → Custom Domains** in Kit, enter your desired subdomain, and add the provided CNAME record to your domain's DNS. Once verified, all your Kit landing pages will be available at your custom subdomain.
+
+## Connecting a Form to a Sequence or Automation
+
+Forms don't have to just add subscribers to your list — they can trigger automated follow-up immediately. In your form's settings, you can:
+
+- **Add to a sequence** — subscribers who sign up through this form automatically receive your sequence emails starting from day one
+- **Trigger an automation** — the form sign-up fires an automation that can apply tags, add to multiple sequences, or take more complex conditional actions
+
+This is how you build a complete onboarding experience: visitor finds your landing page, subscribes, receives their lead magnet via the incentive email, then automatically enters a five-day welcome sequence — all without any manual work on your part.
+
+## Conversion Rate Tips
+
+A 1–2% landing page conversion rate is typical; 5%+ is excellent. A few changes consistently move the needle:
+
+- **Name the specific outcome**, not the format — "Learn to write faster" beats "Free writing ebook"
+- **Use only the fields you need** — every extra field reduces conversions. Start with email only.
+- **Write your button text in first person** — "Send me the guide" outperforms "Get the guide"
+- **Add social proof** — "Join 3,400 creators" or a short testimonial below the button builds trust
+- **Remove all outbound links** from landing pages — you want one action and one action only

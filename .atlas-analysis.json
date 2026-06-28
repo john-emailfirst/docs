@@ -1,0 +1,123 @@
+{
+  "projectType": "general",
+  "projectName": "Email-First Business",
+  "projectDescription": "A knowledge base for solopreneurs covering the email-first business framework and practical guides for Kit (formerly ConvertKit).",
+  "theme": "maple",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Email-First Framework",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "email-first/what-is-email-first",
+              "email-first/why-email"
+            ]
+          },
+          {
+            "group": "Strategy",
+            "pages": [
+              "email-first/positioning",
+              "email-first/niche-and-audience",
+              "email-first/content-strategy"
+            ]
+          },
+          {
+            "group": "List Building",
+            "pages": [
+              "email-first/lead-magnets",
+              "email-first/landing-pages",
+              "email-first/growth-channels"
+            ]
+          },
+          {
+            "group": "Monetisation",
+            "pages": [
+              "email-first/revenue-models",
+              "email-first/selling-to-your-list",
+              "email-first/sponsorships"
+            ]
+          },
+          {
+            "group": "Retention",
+            "pages": [
+              "email-first/subscriber-experience",
+              "email-first/deliverability",
+              "email-first/list-hygiene"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Kit Guide",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "kit/overview",
+              "kit/account-setup",
+              "kit/importing-subscribers"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "kit/forms-and-landing-pages",
+              "kit/tags-and-segments",
+              "kit/broadcasts"
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              "kit/sequences",
+              "kit/automations",
+              "kit/visual-automations"
+            ]
+          },
+          {
+            "group": "Selling & Commerce",
+            "pages": [
+              "kit/kit-commerce",
+              "kit/tips-and-recommendations"
+            ]
+          },
+          {
+            "group": "Best Practices",
+            "pages": [
+              "kit/deliverability-in-kit",
+              "kit/analytics-and-reporting",
+              "kit/integrations"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Email-first business philosophy and framework for solopreneurs",
+    "Audience positioning and niche selection strategy",
+    "Lead magnet and landing page creation",
+    "Multi-channel list growth tactics",
+    "Revenue models: courses, products, coaching, sponsorships",
+    "Subscriber retention and deliverability best practices",
+    "Kit account setup and subscriber management",
+    "Forms, landing pages, tags, and segments in Kit",
+    "Email sequences and visual automation workflows",
+    "Kit Commerce for selling digital products",
+    "Analytics, reporting, and integrations in Kit"
+  ],
+  "publicApiSurface": [
+    "Kit Forms API (embed and hosted forms)",
+    "Kit Subscribers API (create, update, tag)",
+    "Kit Sequences API (subscribe/unsubscribe)",
+    "Kit Tags API (create, assign, remove)",
+    "Kit Broadcasts API (create, send)",
+    "Kit Webhooks (subscriber events, purchase events)",
+    "Kit Commerce (product creation, checkout links)"
+  ]
+}
