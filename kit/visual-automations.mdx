@@ -2,6 +2,7 @@
 title: "Visual Automations in Kit: Build Subscriber Journeys"
 sidebarTitle: "Visual Automations"
 description: "Kit's Visual Automations builder lets you create multi-step subscriber journeys with branching logic, conditions, and events on a drag-and-drop canvas."
+icon: "bolt-auto"
 ---
 
 Visual Automations give you a bird's-eye view of your entire subscriber journey on a single canvas. Where basic automation rules handle one trigger and one or more actions, Visual Automations let you chain together events, waits, conditions, and actions into complex workflows — all mapped visually so you can see exactly what happens to a subscriber from the moment they enter to the moment they exit.
@@ -13,12 +14,12 @@ Visual Automations give you a bird's-eye view of your entire subscriber journey 
 ## When to Use Visual Automations vs. Basic Rules
 
 | Scenario | Use Basic Rules | Use Visual Automations |
-|---|---|---|
-| Single trigger, one or two actions | ✅ | |
-| Multi-step journey with delays | | ✅ |
-| Branching logic (if/else conditions) | | ✅ |
-| Want to visualise the full journey | | ✅ |
-| Quick setup for a single event | ✅ | |
+| --- | --- | --- |
+| Single trigger, one or two actions | ✅ |  |
+| Multi-step journey with delays |  | ✅ |
+| Branching logic (if/else conditions) |  | ✅ |
+| Want to visualise the full journey |  | ✅ |
+| Quick setup for a single event | ✅ |  |
 
 <Note>
   Visual Automations are available on all Kit plans. However, branching conditions (if/else logic) require the Creator plan or higher. On the free plan, you can build linear automations — entry point, actions, and wait steps — but you cannot add conditional branches.
@@ -29,42 +30,52 @@ Visual Automations give you a bird's-eye view of your entire subscriber journey 
 Every Visual Automation is assembled from four types of blocks:
 
 ### Events (Entry Points)
+
 Events are where subscribers enter the automation. Only one event can start each automation:
+
 - **Form subscribe** — A subscriber opts in via a specific form
 - **Tag applied** — A specific tag is added to a subscriber's profile
 - **Link click** — A subscriber clicks a tracked link in a Kit email
 - **Product purchase** — A subscriber completes a Kit Commerce purchase
 
 ### Actions
+
 Actions are things Kit does to or for the subscriber:
+
 - **Add tag** / **Remove tag** — Apply or strip a label
 - **Subscribe to sequence** / **Unsubscribe from sequence** — Enrol or remove from an email series
 - **Send email** — Deliver a one-off email at this point in the journey
 - **Wait** — Pause the subscriber's progress for a set number of days before the next step
 
 ### Conditions
+
 Conditions create branches in the journey. Kit evaluates the condition and sends the subscriber down the 'Yes' path or the 'No' path:
+
 - Does subscriber have tag X?
 - Has subscriber purchased a specific product?
 - Was the last email opened?
 - Does a custom field equal a specific value?
 
 ### Wait Steps
+
 Wait steps are standalone delays between actions. Unlike sequence delays (which are set per email), a wait step in a Visual Automation pauses the entire workflow — useful when you want several actions to happen, then a pause, then several more.
 
 ## Example Automation Journeys
 
 ### 1. Lead Magnet Funnel
+
 This is the most common Visual Automation for content creators:
 
 **Form subscribe** → Deliver lead magnet email → **Wait 3 days** → **Condition: Did they open the delivery email?** → If Yes: Send upsell offer → If No: Send re-engagement email with a different subject line
 
 ### 2. Product Launch Campaign
+
 Run a structured launch to a segmented list:
 
-**Tag applied: 'launch-list'** → Send launch email 1 → **Wait 2 days** → Send launch email 2 → **Wait 1 day** → **Condition: Has subscriber purchased?** → If Yes: Remove from sequence + add 'customer' tag → If No: Send final urgency email
+**Tag applied: 'launch-list'** → Send launch email 1 → **Wait 2 days** → Send launch email 2 → **Wait 1 day** → **Condition: Has subscriber purchased?** → If Yes: Remove from sequence \+ add 'customer' tag → If No: Send final urgency email
 
 ### 3. Course Onboarding After Purchase
+
 Deliver a smooth onboarding experience to new students:
 
 **Product purchase** → Send welcome email → **Wait 1 day** → Subscribe to onboarding sequence → Add tag 'course-active' → **Wait 7 days** → Send check-in email
@@ -79,13 +90,13 @@ Deliver a smooth onboarding experience to new students:
     A blank canvas opens with an empty start block. Click it and select **Form Subscribe**. Choose the specific opt-in form you're using for your lead magnet. Every subscriber who completes this form will enter the automation here.
   </Step>
   <Step title="Add a 'Send Email' action">
-    Click the **+** button below your entry event and add a **Send Email** action. Write your lead magnet delivery email — include the download link or the content itself in the email body. Set the delay to 0 (send immediately).
+    Click the **\+** button below your entry event and add a **Send Email** action. Write your lead magnet delivery email — include the download link or the content itself in the email body. Set the delay to 0 (send immediately).
   </Step>
   <Step title="Add a Wait step">
-    Click **+** below the send email block and add a **Wait** step. Set it to **3 days**. This gives the subscriber time to engage with the lead magnet before your next touchpoint.
+    Click **\+** below the send email block and add a **Wait** step. Set it to **3 days**. This gives the subscriber time to engage with the lead magnet before your next touchpoint.
   </Step>
   <Step title="Add a condition (Creator plan)">
-    Click **+** below the wait step and add a **Condition**. Select **Email was opened** and choose your lead magnet delivery email. Kit will split the path into two branches: **Yes** (opened) and **No** (not opened).
+    Click **\+** below the wait step and add a **Condition**. Select **Email was opened** and choose your lead magnet delivery email. Kit will split the path into two branches: **Yes** (opened) and **No** (not opened).
   </Step>
   <Step title="Add actions on each branch">
     On the **Yes** branch, add a **Subscribe to Sequence** action and select your welcome or nurture sequence. On the **No** branch, add a **Send Email** action with a re-engagement message using a different subject line to get their attention.
