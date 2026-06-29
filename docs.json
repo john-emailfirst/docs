@@ -8,8 +8,8 @@
     "dark": "#1e42ae"
   },
   "favicon": {
-    "light": "/images/EFLogo(Darktext).png",
-    "dark": "/images/EFLogo(Whitetext).png"
+    "light": "/images/EFfavicon.png",
+    "dark": "/images/EFfavicon.png"
   },
   "navigation": {
     "tabs": [
