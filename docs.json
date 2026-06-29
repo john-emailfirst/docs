@@ -28,42 +28,43 @@
         "icon": "book-open",
         "groups": [
           {
-            "group": "Getting Started",
-            "icon": "octagon-check",
+            "group": "Kit Setup",
+            "icon": "gear",
             "pages": [
-              "kit/account-setup",
+              "kit/settings",
               "kit/sending-domains",
               "kit/custom-domains"
             ]
           },
           {
-            "group": "Audience",
-            "icon": "users",
+            "group": "Audience Growth",
+            "icon": "chart-line-up",
             "pages": [
               "kit/landing-pages",
               "kit/opt-in-forms",
               "kit/subscribers",
               "kit/personalisation/tags-and-segments",
-              "kit/personalisation/segments",
               "kit/personalisation/custom-fields",
+              "kit/personalisation/segments",
               "kit/personalisation/polls",
               "kit/newsletter-site",
               "kit/recommendations"
             ]
           },
           {
-            "group": "Email",
+            "group": "Emails",
             "icon": "envelope",
             "pages": [
               "kit/broadcast-emails",
               "kit/sequences",
-              "kit/rss-feeds",
               "kit/personalisation/liquid-code",
-              "kit/deliverability-in-kit"
+              "kit/deliverability-in-kit",
+              "kit/snippets",
+              "kit/templates"
             ]
           },
           {
-            "group": "Commerce",
+            "group": "Monetisation",
             "icon": "credit-card",
             "pages": [
               "kit/kit-commerce",
@@ -76,14 +77,27 @@
             "pages": [
               "kit/integrations",
               "kit/api-keys",
-              "kit/mcp-server"
+              "kit/mcp-server",
+              "kit/apps",
+              "kit/webhooks"
             ]
           },
           {
             "group": "Reporting",
-            "icon": "chart-line",
+            "icon": "chart-area",
             "pages": [
-              "kit/analytics-and-reporting"
+              "kit/kit-dashboard",
+              "kit/analytics-and-reporting",
+              "kit/data-exports"
+            ]
+          },
+          {
+            "group": "Automations",
+            "icon": "bolt-lightning",
+            "pages": [
+              "kit/visual-automations",
+              "kit/rss-feeds",
+              "kit/rules"
             ]
           }
         ]

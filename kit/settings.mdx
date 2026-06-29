@@ -1,0 +1,27 @@
+---
+title: "Configure Your Kit Account for Email-First Success"
+sidebarTitle: "Account Settings"
+description: "Configure your Kit account correctly from the start — sender domain, profile, and compliance settings — to protect deliverability and subscriber trust."
+icon: "flask-gear"
+---
+
+<Steps>
+  <Step title="Create your account and verify your sending email domain">
+    Go to [kit.com](https://partners.kit.com/baa5bi) and sign up with your email address. Kit will send you a verification email — click the link before doing anything else. An unverified account has sending restrictions that will silently limit you.
+  </Step>
+  <Step title="Set your sender name and email address">
+    Navigate to **Settings → Email** and set your **From name** and **From email address**. Your From name should be your personal name, your brand name, or a combination (e.g., "Alex from Indie Maker"). Avoid generic names like "Newsletter" or "Team". Your From email address should come from your own domain — not Gmail, Yahoo, or any free provider.
+  </Step>
+  <Step title="Add your physical address for compliance">
+    Go to **Settings → Email** and scroll to the address section. Enter a physical mailing address. This is legally required by CAN-SPAM in the US and is standard compliance practice globally. Kit automatically appends this address to every email footer.
+  </Step>
+  <Step title="Connect your custom sending domain">
+    In **Settings → Email**, find the **Custom Sending Domain** section and enter your domain (e.g., `yourdomain.com`). Kit will generate the DNS records you need to add — specifically an SPF record and two DKIM records.
+  </Step>
+  <Step title="Add the DNS records to your domain registrar">
+    Log in to your domain registrar (Cloudflare, Namecheap, GoDaddy, etc.) and add the SPF and DKIM records that Kit provides. SPF authorises Kit's servers to send on behalf of your domain. DKIM cryptographically signs outgoing emails so receiving servers can verify they're genuine. Both are essential for deliverability.
+  </Step>
+  <Step title="Verify your domain in Kit">
+    Return to **Settings → Email** in Kit and click **Verify DNS Records**. Verification can take anywhere from a few minutes to 48 hours depending on your DNS provider. Once verified, Kit will show a green confirmation and all future emails will be sent from your custom domain.
+  </Step>
+</Steps>

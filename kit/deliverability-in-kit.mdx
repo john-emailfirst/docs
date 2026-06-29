@@ -2,6 +2,7 @@
 title: "Optimise Deliverability in Kit: Technical Setup Guide"
 sidebarTitle: "Deliverability"
 description: "Configure Kit's sending infrastructure to maximise inbox placement. Covers custom domains, DNS authentication, bounce handling, and complaint monitoring."
+icon: "truck-fast"
 ---
 
 Getting your emails into inboxes — not spam folders — is the foundation everything else in email marketing is built on. Kit handles a lot of deliverability infrastructure for you behind the scenes, but the single most important thing you can do is complete the technical setup correctly. This guide walks you through every step, from connecting a custom sending domain to monitoring your reputation in Gmail's Postmaster Tools.
@@ -21,6 +22,7 @@ Kit sends emails on shared infrastructure, which means many senders share the sa
     By default, Kit sends from a kit.com subdomain. Emails sent from `yourname@gmail.com` or from a generic platform domain land in spam far more often than emails from your own domain.
 
     To connect your domain:
+
     1. Go to **Account Settings → Sending Domains**
     2. Click **Add Domain**
     3. Enter your domain (e.g., `yourdomain.com`)
@@ -46,7 +48,7 @@ Kit sends emails on shared infrastructure, which means many senders share the sa
 
     Start with a monitoring-only policy so you can collect data before enforcing anything:
 
-    ```
+    ```text
     v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com
     ```
 
@@ -54,7 +56,7 @@ Kit sends emails on shared infrastructure, which means many senders share the sa
 
     Once you've confirmed your SPF and DKIM are passing consistently (check after 2–4 weeks), upgrade to an enforcement policy:
 
-    ```
+    ```text
     v=DMARC1; p=quarantine; rua=mailto:dmarc@yourdomain.com
     ```
 
@@ -104,6 +106,7 @@ If you're importing a list, always validate email addresses before importing. Fr
 Kit monitors spam complaint rates across all senders on its platform. If your complaint rate rises above acceptable thresholds, Kit will flag your account for review and may temporarily suspend sending.
 
 To keep complaint rates low:
+
 - Always use confirmed opt-in (double opt-in) for new subscribers
 - Never import purchased, rented, or borrowed lists
 - Make unsubscribing easy — a buried unsubscribe link causes spam complaints
@@ -116,10 +119,10 @@ The acceptable spam complaint rate is generally below 0.1% (1 complaint per 1,00
 If you're starting from scratch with a brand-new domain — not migrating from an existing warm domain — you need to build reputation gradually:
 
 | Week | Send volume |
-|---|---|
+| --- | --- |
 | Week 1 | 200–500 emails to your most engaged subscribers |
 | Week 2 | 500–1,000 emails |
 | Week 3 | 1,000–3,000 emails |
-| Week 4+ | Scale to full list volume |
+| Week 4\+ | Scale to full list volume |
 
 If you're migrating from another platform with an established domain, your reputation moves with you — no warm-up required.
