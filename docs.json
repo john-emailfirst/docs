@@ -20,7 +20,8 @@
           "coffee-and-kit",
           "whats-new"
         ],
-        "icon": "map"
+        "icon": "map",
+        "hidden": true
       },
       {
         "tab": "The Kit Handbook",
@@ -42,12 +43,12 @@
               "kit/landing-pages",
               "kit/opt-in-forms",
               "kit/subscribers",
-              "kit/recommendations",
               "kit/personalisation/tags-and-segments",
               "kit/personalisation/segments",
               "kit/personalisation/custom-fields",
               "kit/personalisation/polls",
-              "kit/newsletter-site"
+              "kit/newsletter-site",
+              "kit/recommendations"
             ]
           },
           {
@@ -135,7 +136,8 @@
               "email-first/list-hygiene"
             ]
           }
-        ]
+        ],
+        "hidden": true
       }
     ]
   },
