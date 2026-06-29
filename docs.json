@@ -32,8 +32,18 @@
             "icon": "gear",
             "pages": [
               "kit/settings",
-              "kit/sending-domains",
+              "kit/domain-authentication",
               "kit/custom-domains"
+            ]
+          },
+          {
+            "group": "Subscribers",
+            "icon": "users-cog",
+            "pages": [
+              "kit/personalisation/tags-and-segments",
+              "kit/personalisation/custom-fields",
+              "kit/personalisation/segments",
+              "kit/personalisation/polls"
             ]
           },
           {
@@ -43,10 +53,6 @@
               "kit/landing-pages",
               "kit/opt-in-forms",
               "kit/subscribers",
-              "kit/personalisation/tags-and-segments",
-              "kit/personalisation/custom-fields",
-              "kit/personalisation/segments",
-              "kit/personalisation/polls",
               "kit/newsletter-site",
               "kit/recommendations"
             ]
@@ -61,6 +67,15 @@
               "kit/deliverability-in-kit",
               "kit/snippets",
               "kit/templates"
+            ]
+          },
+          {
+            "group": "Automations",
+            "icon": "bolt-lightning",
+            "pages": [
+              "kit/visual-automations",
+              "kit/rss-feeds",
+              "kit/rules"
             ]
           },
           {
@@ -89,15 +104,6 @@
               "kit/kit-dashboard",
               "kit/analytics-and-reporting",
               "kit/data-exports"
-            ]
-          },
-          {
-            "group": "Automations",
-            "icon": "bolt-lightning",
-            "pages": [
-              "kit/visual-automations",
-              "kit/rss-feeds",
-              "kit/rules"
             ]
           }
         ]
