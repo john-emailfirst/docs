@@ -46,7 +46,8 @@
               "kit/personalisation/tags-and-segments",
               "kit/personalisation/segments",
               "kit/personalisation/custom-fields",
-              "kit/personalisation/polls"
+              "kit/personalisation/polls",
+              "kit/newsletter-site"
             ]
           },
           {
@@ -55,7 +56,6 @@
             "pages": [
               "kit/broadcast-emails",
               "kit/sequences",
-              "kit/newsletter-site",
               "kit/rss-feeds",
               "kit/personalisation/liquid-code",
               "kit/deliverability-in-kit"
