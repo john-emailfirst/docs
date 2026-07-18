@@ -31,9 +31,7 @@
             "group": "Kit Setup",
             "icon": "gear",
             "pages": [
-              "kit/settings",
-              "kit/domain-authentication",
-              "kit/custom-domains"
+              "kit/settings"
             ]
           },
           {
